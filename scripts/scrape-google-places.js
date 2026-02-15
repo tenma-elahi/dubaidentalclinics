@@ -8,7 +8,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-const API_KEY = 'AIzaSyA7sFLszMz62PeGJVjT8y12BUEDWc4LjTE';
+const API_KEY = process.env.GOOGLE_PLACES_API_KEY || '';
 const BASE_URL = 'https://places.googleapis.com/v1';
 const DELAY_MS = 200; // Rate limiting delay
 
