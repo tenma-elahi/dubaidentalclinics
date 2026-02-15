@@ -182,9 +182,10 @@ export default function ClinicsPage() {
               style={{animationDelay: `${(i % 12) * 0.03}s`}}
             >
               {/* Screenshot Image */}
-              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary-500 to-accent-500">
                 <img 
                   src={`/images/clinics/${clinic.slug}.jpg`}
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
                   alt={`${clinic.name} - dental clinic in ${clinic.area}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"

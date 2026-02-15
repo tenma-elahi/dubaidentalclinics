@@ -76,6 +76,7 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
       <div className="relative h-96 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
         <img 
           src={`/images/clinics/${clinic.slug}.jpg`}
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
           alt={`${clinic.name} - dental clinic in ${clinic.area}`}
           className="w-full h-full object-cover"
         />
