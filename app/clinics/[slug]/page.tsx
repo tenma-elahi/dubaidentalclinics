@@ -72,53 +72,62 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-dental text-white py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumbs */}
-          <nav className="text-sm mb-5 text-blue-100 breadcrumb" aria-label="Breadcrumb">
-            <ol className="flex items-center flex-wrap gap-2">
-              <li><a href="/">Home</a></li>
-              <li><span className="mx-1">/</span></li>
-              <li><a href="/clinics">Clinics</a></li>
-              <li><span className="mx-1">/</span></li>
-              <li><a href={`/dentists/${areaSlug}`}>{clinic.area}</a></li>
-              <li><span className="mx-1">/</span></li>
-              <li><span className="text-white font-medium">{clinic.name}</span></li>
-            </ol>
-          </nav>
+      {/* Hero Section with Image */}
+      <div className="relative h-96 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+        <img 
+          src={`/images/clinics/${clinic.slug}.jpg`}
+          alt={`${clinic.name} - dental clinic in ${clinic.area}`}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+        
+        <div className="absolute bottom-0 left-0 right-0 text-white pb-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Breadcrumbs */}
+            <nav className="text-sm mb-5 text-blue-100 breadcrumb" aria-label="Breadcrumb">
+              <ol className="flex items-center flex-wrap gap-2">
+                <li><a href="/" className="hover:text-white">Home</a></li>
+                <li><span className="mx-1">/</span></li>
+                <li><a href="/clinics" className="hover:text-white">Clinics</a></li>
+                <li><span className="mx-1">/</span></li>
+                <li><a href={`/dentists/${areaSlug}`} className="hover:text-white">{clinic.area}</a></li>
+                <li><span className="mx-1">/</span></li>
+                <li><span className="text-white font-medium">{clinic.name}</span></li>
+              </ol>
+            </nav>
 
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-            <div className="flex-1">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-                {clinic.name}
-              </h1>
-              <div className="flex flex-wrap items-center gap-3">
-                <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20">
-                  <LocationIcon className="w-4 h-4" />
-                  <span>{clinic.area}, Dubai</span>
-                </div>
-                {isEmergency && (
-                  <div className="flex items-center gap-2 bg-red-500/20 backdrop-blur-sm px-3 py-2 rounded-lg border border-red-400/30">
-                    <AlertIcon className="w-4 h-4" />
-                    <span className="font-semibold">24/7 Emergency</span>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+              <div className="flex-1">
+                <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight drop-shadow-lg">
+                  {clinic.name}
+                </h1>
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 py-2 rounded-lg border border-white/30">
+                    <LocationIcon className="w-4 h-4" />
+                    <span>{clinic.area}, Dubai</span>
                   </div>
-                )}
+                  {isEmergency && (
+                    <div className="flex items-center gap-2 bg-red-500/30 backdrop-blur-md px-3 py-2 rounded-lg border border-red-400/40">
+                      <AlertIcon className="w-4 h-4" />
+                      <span className="font-semibold">24/7 Emergency</span>
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
 
-            <div className="glass-card px-6 py-4 rounded-xl text-center">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <StarIcon className="w-8 h-8 text-yellow-300" filled />
-                <span className="text-3xl font-bold">{clinic.rating}</span>
-              </div>
-              <div className="text-blue-100 text-sm">
-                {clinic.reviewCount.toLocaleString()} reviews
+              <div className="bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl text-center shadow-lg">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <StarIcon className="w-8 h-8 text-yellow-500" filled />
+                  <span className="text-3xl font-bold text-gray-900">{clinic.rating}</span>
+                </div>
+                <div className="text-gray-600 text-sm">
+                  {clinic.reviewCount.toLocaleString()} reviews
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid lg:grid-cols-3 gap-6">
@@ -172,26 +181,28 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
                   </div>
                 </div>
 
+                {/* Google Maps Embed */}
+                <div className="bg-gray-100 rounded-lg overflow-hidden border border-gray-200 mb-4">
+                  <iframe
+                    src={`https://maps.google.com/maps?q=${clinic.lat},${clinic.lng}&z=15&output=embed`}
+                    width="100%"
+                    height="300"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Map showing location of ${clinic.name}`}
+                  ></iframe>
+                </div>
+
                 <a
                   href={`https://maps.google.com/?q=${clinic.lat},${clinic.lng}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary w-full text-center flex items-center justify-center gap-2"
+                  className="btn-secondary w-full text-center flex items-center justify-center gap-2"
                 >
                   <LocationIcon className="w-4 h-4" />
                   <span>Open in Google Maps</span>
                 </a>
-              </div>
-
-              {/* Map Placeholder */}
-              <div className="bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
-                <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <LocationIcon className="w-16 h-16 mx-auto mb-3 text-gray-400" />
-                    <div className="font-medium">Map View</div>
-                    <div className="text-sm">Click above to view in Google Maps</div>
-                  </div>
-                </div>
               </div>
             </div>
 

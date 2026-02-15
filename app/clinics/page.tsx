@@ -178,12 +178,26 @@ export default function ClinicsPage() {
             <a
               key={clinic.slug}
               href={`/clinics/${clinic.slug}`}
-              className="clinic-card glass-card p-5 rounded-xl block group"
+              className="clinic-card glass-card rounded-xl overflow-hidden block group"
               style={{animationDelay: `${(i % 12) * 0.03}s`}}
             >
-              {/* Header */}
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex-1">
+              {/* Screenshot Image */}
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+                <img 
+                  src={`/images/clinics/${clinic.slug}.jpg`}
+                  alt={`${clinic.name} - dental clinic in ${clinic.area}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 right-3 flex items-center gap-1 bg-yellow-50 px-2.5 py-1.5 rounded-lg shadow-md">
+                  <StarIcon className="w-4 h-4 text-yellow-500" filled />
+                  <span className="font-bold text-gray-900 text-sm">{clinic.rating}</span>
+                </div>
+              </div>
+
+              {/* Card Content */}
+              <div className="p-5">
+                <div className="mb-4">
                   <h3 className="font-bold text-base text-gray-900 mb-1.5 group-hover:text-primary-600 transition-colors">
                     {clinic.name}
                   </h3>
@@ -191,49 +205,43 @@ export default function ClinicsPage() {
                     <LocationIcon className="w-4 h-4" />
                     <span>{clinic.area}</span>
                   </div>
-                </div>
-                <div className="flex flex-col items-end">
-                  <div className="flex items-center gap-1 bg-yellow-50 px-2.5 py-1.5 rounded-lg">
-                    <StarIcon className="w-4 h-4 text-yellow-500" filled />
-                    <span className="font-bold text-gray-900 text-sm">{clinic.rating}</span>
-                  </div>
-                  <span className="text-xs text-gray-400 mt-1">
+                  <div className="text-xs text-gray-400 mt-1">
                     {clinic.reviewCount.toLocaleString()} reviews
-                  </span>
+                  </div>
                 </div>
-              </div>
 
-              {/* Services Tags */}
-              {clinic.services && clinic.services.length > 0 && (
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {clinic.services.slice(0, 3).map((service: string) => (
-                    <span 
-                      key={service} 
-                      className="bg-primary-50 text-primary-700 px-2 py-1 rounded-md text-xs font-medium"
-                    >
-                      {service}
-                    </span>
-                  ))}
-                  {clinic.services.length > 3 && (
-                    <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md text-xs font-medium">
-                      +{clinic.services.length - 3}
-                    </span>
-                  )}
-                </div>
-              )}
-
-              {/* Footer */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                <span className="text-primary-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                  <span>View Details</span>
-                  <ArrowRightIcon className="w-4 h-4" />
-                </span>
-                {clinic.phone && (
-                  <div className="flex items-center gap-1 text-xs text-gray-400">
-                    <PhoneIcon className="w-3.5 h-3.5 text-green-500" />
-                    <span>Available</span>
+                {/* Services Tags */}
+                {clinic.services && clinic.services.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {clinic.services.slice(0, 3).map((service: string) => (
+                      <span 
+                        key={service} 
+                        className="bg-primary-50 text-primary-700 px-2 py-1 rounded-md text-xs font-medium"
+                      >
+                        {service}
+                      </span>
+                    ))}
+                    {clinic.services.length > 3 && (
+                      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md text-xs font-medium">
+                        +{clinic.services.length - 3}
+                      </span>
+                    )}
                   </div>
                 )}
+
+                {/* Footer */}
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                  <span className="text-primary-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                    <span>View Details</span>
+                    <ArrowRightIcon className="w-4 h-4" />
+                  </span>
+                  {clinic.phone && (
+                    <div className="flex items-center gap-1 text-xs text-gray-400">
+                      <PhoneIcon className="w-3.5 h-3.5 text-green-500" />
+                      <span>Available</span>
+                    </div>
+                  )}
+                </div>
               </div>
             </a>
           ))}
