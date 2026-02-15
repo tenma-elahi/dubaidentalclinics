@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import clinicsData from '../../../data/clinics.json'
+import ClinicImage from '../../../components/ClinicImage'
 import { 
   LocationIcon, StarIcon, AlertIcon, PhoneIcon, CheckIcon, HospitalIcon,
   MedicalIcon, ArrowRightIcon, CalendarIcon, ToothIcon
@@ -74,12 +75,7 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section with Image */}
       <div className="relative h-96 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
-        <img 
-          src={`/images/clinics/${clinic.slug}.jpg`}
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
-          alt={`${clinic.name} - dental clinic in ${clinic.area}`}
-          className="w-full h-full object-cover"
-        />
+        <ClinicImage slug={clinic.slug} name={clinic.name} area={clinic.area} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
         
         <div className="absolute bottom-0 left-0 right-0 text-white pb-8">

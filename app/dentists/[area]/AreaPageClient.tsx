@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import ClinicImage from '../../../components/ClinicImage'
 import { 
   LocationIcon, SearchIcon, ChevronDownIcon, HospitalIcon, StarIcon, 
   CheckIcon, PhoneIcon, ArrowRightIcon, XIcon 
@@ -182,13 +183,7 @@ export default function AreaPageClient({ area, clinics: initialClinics }: { area
               >
                 {/* Screenshot Image */}
                 <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary-500 to-accent-500">
-                  <img 
-                    src={`/images/clinics/${clinic.slug}.jpg`}
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
-                    alt={`${clinic.name} - dental clinic in ${area.name}`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
+                  <ClinicImage slug={clinic.slug} name={clinic.name} area={area.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute top-3 right-3 flex items-center gap-1 bg-yellow-50 px-2.5 py-1.5 rounded-lg shadow-md">
                     <StarIcon className="w-4 h-4 text-yellow-500" filled />
                     <span className="font-bold text-gray-900 text-sm">{clinic.rating}</span>
