@@ -18,7 +18,6 @@ package = "@netlify/plugin-nextjs"
 publish = "/Users/tenma/clawd/projects/dubai-dental/.next"
 publishOrigin = "ui"
 commandOrigin = "ui"
-base = "/Users/tenma/clawd/projects/dubai-dental"
 command = "npm run build"
 
 [build.environment]

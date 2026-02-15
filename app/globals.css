@@ -2,55 +2,232 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary: #0891b2;
-  --secondary: #06b6d4;
-  --accent: #22d3ee;
+@layer base {
+  :root {
+    --primary: #0066cc;
+    --accent: #00e6b8;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+@layer components {
+  /* Hero Gradient with Pattern */
+  .hero-gradient {
+    background: linear-gradient(135deg, #0066cc 0%, #0080e6 50%, #00e6b8 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Glassmorphism Card Effect */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
+
+  /* Clinic Card with Advanced Hover */
+  .clinic-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+
+  .clinic-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 20px 40px -8px rgba(0, 102, 204, 0.3);
+  }
+
+  .clinic-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .clinic-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Star Rating */
+  .star-rating {
+    color: #fbbf24;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Animated Counter */
+  @keyframes countUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .counter {
+    animation: countUp 0.5s ease-out;
+  }
+
+  /* Search Box Enhancement */
+  .search-box {
+    transition: all 0.3s;
+  }
+
+  .search-box:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-open {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-closed {
+    @apply bg-gray-100 text-gray-600;
+  }
+
+  .badge-emergency {
+    @apply bg-red-100 text-red-800 animate-pulse-slow;
+  }
+
+  /* Section Pattern Background */
+  .pattern-bg {
+    background-color: #f8fbff;
+    background-image: 
+      linear-gradient(30deg, #f0f7ff 12%, transparent 12.5%, transparent 87%, #f0f7ff 87.5%, #f0f7ff),
+      linear-gradient(150deg, #f0f7ff 12%, transparent 12.5%, transparent 87%, #f0f7ff 87.5%, #f0f7ff),
+      linear-gradient(30deg, #f0f7ff 12%, transparent 12.5%, transparent 87%, #f0f7ff 87.5%, #f0f7ff),
+      linear-gradient(150deg, #f0f7ff 12%, transparent 12.5%, transparent 87%, #f0f7ff 87.5%, #f0f7ff);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, #0066cc 0%, #00e6b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Service Icon Container */
+  .service-icon {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center text-3xl;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(0, 230, 184, 0.1) 100%);
+    transition: all 0.3s;
+  }
+
+  .service-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.2) 0%, rgba(0, 230, 184, 0.2) 100%);
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-primary-600 px-6 py-3 rounded-xl font-semibold transition-all duration-300 border-2 border-primary-500;
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    @apply bg-white rounded-2xl p-8 shadow-glass relative;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 80px;
+    color: rgba(0, 102, 204, 0.1);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  /* Loading Skeleton */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .skeleton {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(to right, #f0f0f0 4%, #e0e0e0 25%, #f0f0f0 36%);
+    background-size: 1000px 100%;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb a {
+    @apply text-gray-500 hover:text-primary-600 transition-colors;
+  }
+
+  /* Feature Grid Item */
+  .feature-item {
+    @apply text-center p-6 rounded-2xl transition-all duration-300;
+  }
+
+  .feature-item:hover {
+    @apply bg-white shadow-glass;
+    transform: translateY(-4px);
+  }
 }
 
-.text-primary {
-  color: var(--primary);
-}
+/* Utility Classes */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
-.bg-primary {
-  background-color: var(--primary);
-}
-
-.hover\:bg-primary:hover {
-  background-color: var(--primary);
-}
-
-.border-primary {
-  border-color: var(--primary);
-}
-
-/* Hero gradient */
-.hero-gradient {
-  background: linear-gradient(135deg, #0891b2 0%, #06b6d4 50%, #22d3ee 100%);
-}
-
-/* Card hover effects */
-.clinic-card {
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.clinic-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
-}
-
-/* Rating stars */
-.star-rating {
-  color: #fbbf24;
-}
-
-/* Search box */
-.search-box:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
 }
