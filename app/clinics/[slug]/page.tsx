@@ -1,6 +1,10 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import clinicsData from '../../../data/clinics.json'
+import { 
+  LocationIcon, StarIcon, AlertIcon, PhoneIcon, CheckIcon, HospitalIcon,
+  MedicalIcon, ArrowRightIcon, CalendarIcon, ToothIcon
+} from '../../../components/Icons'
 
 type Clinic = {
   name: string
@@ -37,7 +41,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   
   return {
     title: `${clinic.name} - ${clinic.area} | Dubai Dental Clinics`,
-    description: `${clinic.name} in ${clinic.area}, Dubai. ⭐ ${clinic.rating}/5 from ${clinic.reviewCount} reviews. Services: ${clinic.services.slice(0, 4).join(', ')}. Call ${clinic.phone}.`,
+    description: `${clinic.name} in ${clinic.area}, Dubai. ${clinic.rating}/5 from ${clinic.reviewCount} reviews. Services: ${clinic.services.slice(0, 4).join(', ')}. Call ${clinic.phone}.`,
     openGraph: {
       title: `${clinic.name} - Dental Clinic in ${clinic.area}`,
       description: `${clinic.rating}★ rated dental clinic offering ${clinic.services.slice(0, 3).join(', ')} and more.`,
@@ -67,46 +71,46 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
   const isEmergency = clinic.services.some(s => s.toLowerCase().includes('emergency'))
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-dental text-white py-12">
+      <section className="bg-gradient-dental text-white py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <nav className="text-sm mb-6 text-blue-100 breadcrumb" aria-label="Breadcrumb">
+          <nav className="text-sm mb-5 text-blue-100 breadcrumb" aria-label="Breadcrumb">
             <ol className="flex items-center flex-wrap gap-2">
               <li><a href="/">Home</a></li>
-              <li><span className="mx-2">/</span></li>
+              <li><span className="mx-1">/</span></li>
               <li><a href="/clinics">Clinics</a></li>
-              <li><span className="mx-2">/</span></li>
+              <li><span className="mx-1">/</span></li>
               <li><a href={`/dentists/${areaSlug}`}>{clinic.area}</a></li>
-              <li><span className="mx-2">/</span></li>
+              <li><span className="mx-1">/</span></li>
               <li><span className="text-white font-medium">{clinic.name}</span></li>
             </ol>
           </nav>
 
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
             <div className="flex-1">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
                 {clinic.name}
               </h1>
-              <div className="flex flex-wrap items-center gap-4 text-lg">
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <span className="text-xl">📍</span>
+              <div className="flex flex-wrap items-center gap-3">
+                <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20">
+                  <LocationIcon className="w-4 h-4" />
                   <span>{clinic.area}, Dubai</span>
                 </div>
                 {isEmergency && (
-                  <div className="flex items-center gap-2 bg-red-500/30 backdrop-blur-sm px-4 py-2 rounded-full animate-pulse-slow">
-                    <span className="text-xl">🚨</span>
+                  <div className="flex items-center gap-2 bg-red-500/20 backdrop-blur-sm px-3 py-2 rounded-lg border border-red-400/30">
+                    <AlertIcon className="w-4 h-4" />
                     <span className="font-semibold">24/7 Emergency</span>
                   </div>
                 )}
               </div>
             </div>
 
-            <div className="glass-card px-6 py-4 rounded-2xl text-center">
-              <div className="flex items-center gap-2 text-4xl font-bold mb-2">
-                <span className="text-yellow-300">⭐</span>
-                <span>{clinic.rating}</span>
+            <div className="glass-card px-6 py-4 rounded-xl text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <StarIcon className="w-8 h-8 text-yellow-300" filled />
+                <span className="text-3xl font-bold">{clinic.rating}</span>
               </div>
               <div className="text-blue-100 text-sm">
                 {clinic.reviewCount.toLocaleString()} reviews
@@ -116,55 +120,55 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid lg:grid-cols-3 gap-6">
           {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-6">
             {/* About */}
-            <div className="glass-card rounded-2xl p-8 animate-slide-up">
-              <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                <span className="text-3xl">ℹ️</span>
+            <div className="glass-card rounded-xl p-6">
+              <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <ToothIcon className="w-5 h-5 text-primary-600" />
                 <span>About This Clinic</span>
               </h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-gray-700 leading-relaxed">
                 {clinic.description}
               </p>
             </div>
 
             {/* Services */}
-            <div className="glass-card rounded-2xl p-8 animate-slide-up" style={{animationDelay: '0.1s'}}>
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <span className="text-3xl">🩺</span>
+            <div className="glass-card rounded-xl p-6">
+              <h2 className="text-xl font-bold mb-5 flex items-center gap-2">
+                <MedicalIcon className="w-5 h-5 text-primary-600" />
                 <span>Services Offered</span>
               </h2>
-              <div className="grid md:grid-cols-2 gap-3">
+              <div className="grid md:grid-cols-2 gap-2.5">
                 {clinic.services.map((service: string) => (
                   <div
                     key={service}
-                    className="flex items-center gap-3 bg-gradient-to-r from-primary-50 to-accent-50 p-4 rounded-xl border border-primary-100 hover:shadow-md transition-all group"
+                    className="flex items-center gap-2.5 bg-primary-50 p-3 rounded-lg border border-primary-100"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
-                      ✓
+                    <div className="flex-shrink-0">
+                      <CheckIcon className="w-5 h-5 text-primary-600" />
                     </div>
-                    <span className="font-medium text-gray-900">{service}</span>
+                    <span className="font-medium text-gray-900 text-sm">{service}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Location */}
-            <div className="glass-card rounded-2xl p-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <span className="text-3xl">📍</span>
+            <div className="glass-card rounded-xl p-6">
+              <h2 className="text-xl font-bold mb-5 flex items-center gap-2">
+                <LocationIcon className="w-5 h-5 text-primary-600" />
                 <span>Location & Directions</span>
               </h2>
               
-              <div className="mb-6">
-                <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-xl mb-4">
-                  <span className="text-2xl">🗺️</span>
+              <div className="mb-5">
+                <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg mb-4">
+                  <LocationIcon className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-medium text-gray-900 mb-1">Address</div>
-                    <div className="text-gray-600">{clinic.address}</div>
+                    <div className="text-gray-600 text-sm">{clinic.address}</div>
                   </div>
                 </div>
 
@@ -174,16 +178,16 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
                   rel="noopener noreferrer"
                   className="btn-primary w-full text-center flex items-center justify-center gap-2"
                 >
-                  <span className="text-xl">🧭</span>
+                  <LocationIcon className="w-4 h-4" />
                   <span>Open in Google Maps</span>
                 </a>
               </div>
 
               {/* Map Placeholder */}
-              <div className="bg-gray-100 rounded-xl overflow-hidden border-2 border-gray-200">
+              <div className="bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
                 <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
                   <div className="text-center text-gray-500">
-                    <div className="text-6xl mb-3">🗺️</div>
+                    <LocationIcon className="w-16 h-16 mx-auto mb-3 text-gray-400" />
                     <div className="font-medium">Map View</div>
                     <div className="text-sm">Click above to view in Google Maps</div>
                   </div>
@@ -192,78 +196,83 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
             </div>
 
             {/* Reviews */}
-            <div className="glass-card rounded-2xl p-8 animate-slide-up" style={{animationDelay: '0.3s'}}>
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <span className="text-3xl">⭐</span>
+            <div className="glass-card rounded-xl p-6">
+              <h2 className="text-xl font-bold mb-5 flex items-center gap-2">
+                <StarIcon className="w-5 h-5 text-primary-600" filled />
                 <span>Patient Reviews</span>
               </h2>
               
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-xl mb-6 text-center border border-yellow-200">
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-lg mb-5 text-center border border-yellow-200">
                 <div className="flex items-center justify-center gap-4 mb-4">
-                  <div className="text-6xl font-bold text-primary-600">{clinic.rating}</div>
+                  <div className="text-5xl font-bold text-primary-600">{clinic.rating}</div>
                   <div className="text-left">
-                    <div className="text-yellow-500 text-3xl mb-1">
-                      {'⭐'.repeat(Math.round(clinic.rating))}
+                    <div className="flex gap-0.5 mb-1">
+                      {[...Array(5)].map((_, i) => (
+                        <StarIcon 
+                          key={i}
+                          className="w-6 h-6 text-yellow-500" 
+                          filled={i < Math.round(clinic.rating)} 
+                        />
+                      ))}
                     </div>
-                    <div className="text-gray-600 font-medium">
+                    <div className="text-gray-600 font-medium text-sm">
                       {clinic.reviewCount.toLocaleString()} reviews
                     </div>
                   </div>
                 </div>
-                <div className="text-gray-600 mb-4">
+                <div className="text-gray-600 mb-4 text-sm">
                   Based on verified Google Reviews
                 </div>
                 <a
                   href={`https://www.google.com/search?q=${encodeURIComponent(clinic.name + ' Dubai reviews')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-secondary inline-flex items-center gap-2"
+                  className="btn-secondary inline-flex items-center gap-2 text-sm"
                 >
-                  <span className="text-xl">📱</span>
                   <span>Read All Reviews on Google</span>
+                  <ArrowRightIcon className="w-4 h-4" />
                 </a>
               </div>
             </div>
 
             {/* Nearby Clinics */}
             {nearbyClinics.length > 0 && (
-              <div className="glass-card rounded-2xl p-8 animate-slide-up" style={{animationDelay: '0.4s'}}>
-                <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                  <span className="text-3xl">🏥</span>
+              <div className="glass-card rounded-xl p-6">
+                <h2 className="text-xl font-bold mb-5 flex items-center gap-2">
+                  <HospitalIcon className="w-5 h-5 text-primary-600" />
                   <span>Other Clinics in {clinic.area}</span>
                 </h2>
                 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {nearbyClinics.map((nearby) => (
                     <a
                       key={nearby.slug}
                       href={`/clinics/${nearby.slug}`}
-                      className="flex items-center justify-between p-4 bg-white rounded-xl border-2 border-gray-100 hover:border-primary-300 hover:shadow-md transition-all group"
+                      className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 hover:border-primary-300 hover:shadow-sm transition-all group"
                     >
-                      <div>
-                        <div className="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">
+                      <div className="flex-1">
+                        <div className="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors text-sm">
                           {nearby.name}
                         </div>
-                        <div className="text-sm text-gray-500 mt-1">
+                        <div className="text-xs text-gray-500 mt-1">
                           {nearby.services.slice(0, 2).join(', ')}
                         </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <div className="flex items-center gap-1 bg-yellow-50 px-3 py-1.5 rounded-full">
-                          <span className="text-yellow-500">⭐</span>
-                          <span className="font-bold text-gray-900">{nearby.rating}</span>
+                      <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-1 bg-yellow-50 px-2.5 py-1.5 rounded-lg">
+                          <StarIcon className="w-4 h-4 text-yellow-500" filled />
+                          <span className="font-bold text-gray-900 text-sm">{nearby.rating}</span>
                         </div>
-                        <span className="text-2xl group-hover:translate-x-1 transition-transform">
-                          →
-                        </span>
+                        <ArrowRightIcon className="w-4 h-4 text-gray-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
                       </div>
                     </a>
                   ))}
                 </div>
 
-                <div className="mt-6 text-center">
-                  <a href={`/dentists/${areaSlug}`} className="text-primary-600 font-semibold hover:underline">
-                    View all clinics in {clinic.area} →
+                <div className="mt-5 text-center">
+                  <a href={`/dentists/${areaSlug}`} className="text-primary-600 font-semibold hover:underline text-sm flex items-center justify-center gap-1">
+                    <span>View all clinics in {clinic.area}</span>
+                    <ArrowRightIcon className="w-4 h-4" />
                   </a>
                 </div>
               </div>
@@ -271,23 +280,23 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
           </div>
 
           {/* Sidebar */}
-          <div className="lg:sticky lg:top-24 space-y-6" style={{height: 'fit-content'}}>
+          <div className="lg:sticky lg:top-20 space-y-5" style={{height: 'fit-content'}}>
             {/* Contact Card */}
-            <div className="glass-card rounded-2xl p-6 animate-slide-up">
-              <h3 className="font-bold text-xl mb-6 flex items-center gap-2">
-                <span className="text-2xl">📞</span>
+            <div className="glass-card rounded-xl p-5">
+              <h3 className="font-bold text-lg mb-5 flex items-center gap-2">
+                <PhoneIcon className="w-5 h-5 text-primary-600" />
                 <span>Contact Information</span>
               </h3>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {clinic.phone && (
                   <div>
-                    <div className="text-sm text-gray-500 mb-2">Phone Number</div>
+                    <div className="text-xs text-gray-500 mb-2 font-medium">Phone Number</div>
                     <a
                       href={`tel:${clinic.phone}`}
-                      className="btn-primary w-full text-center flex items-center justify-center gap-2"
+                      className="btn-primary w-full text-center flex items-center justify-center gap-2 text-sm"
                     >
-                      <span className="text-xl">📱</span>
+                      <PhoneIcon className="w-4 h-4" />
                       <span>{clinic.phone}</span>
                     </a>
                   </div>
@@ -295,15 +304,15 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
 
                 {clinic.website && (
                   <div>
-                    <div className="text-sm text-gray-500 mb-2">Website</div>
+                    <div className="text-xs text-gray-500 mb-2 font-medium">Website</div>
                     <a
                       href={clinic.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-secondary w-full text-center flex items-center justify-center gap-2"
+                      className="btn-secondary w-full text-center flex items-center justify-center gap-2 text-sm"
                     >
-                      <span className="text-xl">🌐</span>
                       <span>Visit Website</span>
+                      <ArrowRightIcon className="w-4 h-4" />
                     </a>
                   </div>
                 )}
@@ -311,25 +320,25 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
             </div>
 
             {/* Opening Hours */}
-            <div className="glass-card rounded-2xl p-6 animate-slide-up" style={{animationDelay: '0.1s'}}>
-              <h3 className="font-bold text-xl mb-6 flex items-center gap-2">
-                <span className="text-2xl">🕐</span>
+            <div className="glass-card rounded-xl p-5">
+              <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+                <CalendarIcon className="w-5 h-5 text-primary-600" />
                 <span>Opening Hours</span>
               </h3>
               
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl">
-                <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg">
+                <div className="text-gray-700 text-sm leading-relaxed whitespace-pre-line">
                   {clinic.hours}
                 </div>
               </div>
 
               {isEmergency && (
-                <div className="mt-4 bg-red-50 border-2 border-red-200 p-4 rounded-xl">
-                  <div className="flex items-center gap-2 text-red-700 font-semibold mb-1">
-                    <span className="text-xl animate-pulse-slow">🚨</span>
+                <div className="mt-4 bg-red-50 border border-red-200 p-3 rounded-lg">
+                  <div className="flex items-center gap-2 text-red-700 font-semibold mb-1 text-sm">
+                    <AlertIcon className="w-4 h-4" />
                     <span>24/7 Emergency Care</span>
                   </div>
-                  <div className="text-sm text-red-600">
+                  <div className="text-xs text-red-600">
                     Emergency services available round the clock
                   </div>
                 </div>
@@ -337,42 +346,27 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
             </div>
 
             {/* Quick Actions */}
-            <div className="glass-card rounded-2xl p-6 animate-slide-up" style={{animationDelay: '0.2s'}}>
-              <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
-                <span className="text-2xl">⚡</span>
-                <span>Quick Actions</span>
-              </h3>
+            <div className="glass-card rounded-xl p-5">
+              <h3 className="font-bold text-lg mb-4">Quick Actions</h3>
               
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <a
                   href={`https://maps.google.com/?q=${clinic.lat},${clinic.lng}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 bg-white hover:bg-primary-50 border border-gray-200 rounded-xl transition-all group"
+                  className="flex items-center gap-3 p-3 bg-white hover:bg-primary-50 border border-gray-200 rounded-lg transition-all group text-sm"
                 >
-                  <span className="text-2xl">🧭</span>
+                  <LocationIcon className="w-4 h-4 text-gray-600 group-hover:text-primary-600" />
                   <span className="font-medium text-gray-700 group-hover:text-primary-600">
                     Get Directions
                   </span>
                 </a>
 
                 <a
-                  href={`https://www.google.com/search?q=${encodeURIComponent(clinic.name + ' Dubai')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 bg-white hover:bg-primary-50 border border-gray-200 rounded-xl transition-all group"
-                >
-                  <span className="text-2xl">🔍</span>
-                  <span className="font-medium text-gray-700 group-hover:text-primary-600">
-                    Search on Google
-                  </span>
-                </a>
-
-                <a
                   href={`/dentists/${areaSlug}`}
-                  className="flex items-center gap-3 p-3 bg-white hover:bg-primary-50 border border-gray-200 rounded-xl transition-all group"
+                  className="flex items-center gap-3 p-3 bg-white hover:bg-primary-50 border border-gray-200 rounded-lg transition-all group text-sm"
                 >
-                  <span className="text-2xl">📍</span>
+                  <HospitalIcon className="w-4 h-4 text-gray-600 group-hover:text-primary-600" />
                   <span className="font-medium text-gray-700 group-hover:text-primary-600">
                     More in {clinic.area}
                   </span>

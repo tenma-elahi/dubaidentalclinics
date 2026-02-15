@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --primary: #0066cc;
-    --accent: #00e6b8;
+    --accent: #00b8a9;
   }
 
   body {
@@ -20,65 +20,32 @@
 }
 
 @layer components {
-  /* Hero Gradient with Pattern */
+  /* Hero Gradient - More Subtle */
   .hero-gradient {
-    background: linear-gradient(135deg, #0066cc 0%, #0080e6 50%, #00e6b8 100%);
+    background: linear-gradient(135deg, #0066cc 0%, #0080dd 100%);
     position: relative;
-    overflow: hidden;
   }
 
-  .hero-gradient::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  /* Glassmorphism Card Effect */
+  /* Clean Card - No Glassmorphism */
   .glass-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    background: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
 
-  /* Clinic Card with Advanced Hover */
+  /* Clinic Card with Subtle Hover */
   .clinic-card {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s ease;
     position: relative;
-  }
-
-  .clinic-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 0.3s;
-    box-shadow: 0 20px 40px -8px rgba(0, 102, 204, 0.3);
   }
 
   .clinic-card:hover {
-    transform: translateY(-6px);
-  }
-
-  .clinic-card:hover::before {
-    opacity: 1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   /* Star Rating */
   .star-rating {
-    color: #fbbf24;
+    color: #f59e0b;
     display: inline-flex;
     align-items: center;
   }
@@ -87,7 +54,7 @@
   @keyframes countUp {
     from {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(5px);
     }
     to {
       opacity: 1;
@@ -96,19 +63,18 @@
   }
 
   .counter {
-    animation: countUp 0.5s ease-out;
+    animation: countUp 0.4s ease-out;
   }
 
   /* Search Box Enhancement */
   .search-box {
-    transition: all 0.3s;
+    transition: all 0.2s;
   }
 
   .search-box:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
   }
 
   /* Badge Styles */
@@ -125,24 +91,12 @@
   }
 
   .badge-emergency {
-    @apply bg-red-100 text-red-800 animate-pulse-slow;
+    @apply bg-red-100 text-red-800;
   }
 
-  /* Section Pattern Background */
-  .pattern-bg {
-    background-color: #f8fbff;
-    background-image: 
-      linear-gradient(30deg, #f0f7ff 12%, transparent 12.5%, transparent 87%, #f0f7ff 87.5%, #f0f7ff),
-      linear-gradient(150deg, #f0f7ff 12%, transparent 12.5%, transparent 87%, #f0f7ff 87.5%, #f0f7ff),
-      linear-gradient(30deg, #f0f7ff 12%, transparent 12.5%, transparent 87%, #f0f7ff 87.5%, #f0f7ff),
-      linear-gradient(150deg, #f0f7ff 12%, transparent 12.5%, transparent 87%, #f0f7ff 87.5%, #f0f7ff);
-    background-size: 80px 140px;
-    background-position: 0 0, 0 0, 40px 70px, 40px 70px;
-  }
-
-  /* Gradient Text */
+  /* Gradient Text - Subtle */
   .gradient-text {
-    background: linear-gradient(135deg, #0066cc 0%, #00e6b8 100%);
+    background: linear-gradient(135deg, #0066cc 0%, #0080dd 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -150,43 +104,33 @@
 
   /* Service Icon Container */
   .service-icon {
-    @apply w-16 h-16 rounded-2xl flex items-center justify-center text-3xl;
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(0, 230, 184, 0.1) 100%);
-    transition: all 0.3s;
+    @apply w-14 h-14 rounded-xl flex items-center justify-center;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.08) 0%, rgba(0, 184, 169, 0.08) 100%);
+    transition: all 0.2s;
+    color: var(--primary);
   }
 
   .service-icon:hover {
-    transform: scale(1.1) rotate(5deg);
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.2) 0%, rgba(0, 230, 184, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.12) 0%, rgba(0, 184, 169, 0.12) 100%);
   }
 
   /* Button Styles */
   .btn-primary {
-    @apply bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200;
   }
 
   .btn-primary:hover {
-    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 102, 204, 0.2);
   }
 
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-primary-600 px-6 py-3 rounded-xl font-semibold transition-all duration-300 border-2 border-primary-500;
+    @apply bg-white hover:bg-gray-50 text-primary-600 px-6 py-3 rounded-lg font-semibold transition-all duration-200 border border-primary-500;
   }
 
   /* Testimonial Card */
   .testimonial-card {
-    @apply bg-white rounded-2xl p-8 shadow-glass relative;
-  }
-
-  .testimonial-card::before {
-    content: '"';
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    font-size: 80px;
-    color: rgba(0, 102, 204, 0.1);
-    font-family: Georgia, serif;
-    line-height: 1;
+    @apply bg-white rounded-xl p-8 border border-gray-200;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   }
 
   /* Loading Skeleton */
@@ -212,12 +156,22 @@
 
   /* Feature Grid Item */
   .feature-item {
-    @apply text-center p-6 rounded-2xl transition-all duration-300;
+    @apply text-center p-6 rounded-xl transition-all duration-200;
   }
 
   .feature-item:hover {
-    @apply bg-white shadow-glass;
-    transform: translateY(-4px);
+    @apply bg-white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  /* Gradient Dental - For Logo */
+  .gradient-dental {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  }
+
+  /* Subtle Background */
+  .bg-gradient-subtle {
+    background-color: #fafbfc;
   }
 }
 
@@ -227,7 +181,65 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .text-shadow-lg {
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Simple fade-in for content */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  /* Slide down (for trust badges, etc) */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.4s ease-out;
+  }
+
+  /* Slide up (for features) */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  /* Scale in (for cards) */
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
   }
 }

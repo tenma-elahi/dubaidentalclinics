@@ -1,8 +1,8 @@
 'use client'
 
-import { Metadata } from 'next'
 import { useState } from 'react'
 import clinicsData from '../../data/clinics.json'
+import { SearchIcon, LocationIcon, StarIcon, PhoneIcon, ArrowRightIcon, XIcon, HospitalIcon, ChevronDownIcon } from '../../components/Icons'
 
 const totalClinics = clinicsData.clinics.length
 const uniqueAreas = Array.from(new Set(clinicsData.clinics.map((c: any) => c.area))).sort()
@@ -38,53 +38,58 @@ export default function ClinicsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-dental text-white py-16">
+      <section className="bg-gradient-dental text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <nav className="text-sm mb-6 text-blue-100" aria-label="Breadcrumb">
+          <nav className="text-sm mb-5 text-blue-100" aria-label="Breadcrumb">
             <a href="/" className="hover:text-white transition-colors">Home</a>
             <span className="mx-2">/</span>
             <span className="text-white font-medium">All Clinics</span>
           </nav>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Dental Clinics in Dubai 🏥
-          </h1>
-          <p className="text-xl text-blue-50">
-            Showing {clinics.length} verified dental clinics {filterArea !== 'all' && `in ${filterArea}`}
+          <div className="flex items-center gap-3 mb-3">
+            <HospitalIcon className="w-8 h-8" />
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+              Dental Clinics in Dubai
+            </h1>
+          </div>
+          <p className="text-lg text-blue-50">
+            Showing {clinics.length} verified dental clinic{clinics.length !== 1 ? 's' : ''} {filterArea !== 'all' && `in ${filterArea}`}
           </p>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Search & Filters */}
-        <div className="glass-card p-6 rounded-2xl mb-8 animate-slide-down">
-          <div className="grid md:grid-cols-3 gap-4">
+        <div className="glass-card p-5 rounded-xl mb-6">
+          <div className="grid md:grid-cols-3 gap-4 mb-5">
             {/* Search */}
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                🔍 Search Clinics
+              <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+                <SearchIcon className="w-4 h-4" />
+                <span>Search Clinics</span>
               </label>
               <input
                 type="text"
                 placeholder="Search by name, area, or service..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-primary-500 focus:ring-4 focus:ring-primary-100 transition-all"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all"
               />
             </div>
 
             {/* Sort */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                ⬇️ Sort By
+              <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+                <ChevronDownIcon className="w-4 h-4" />
+                <span>Sort By</span>
               </label>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-primary-500 focus:ring-4 focus:ring-primary-100 transition-all"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all"
               >
                 <option value="rating">Highest Rated</option>
                 <option value="reviews">Most Reviews</option>
@@ -94,17 +99,18 @@ export default function ClinicsPage() {
           </div>
 
           {/* Area Filter Tags */}
-          <div className="mt-6">
-            <label className="block text-sm font-medium text-gray-700 mb-3">
-              📍 Filter by Area
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <LocationIcon className="w-4 h-4" />
+              <span>Filter by Area</span>
             </label>
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setFilterArea('all')}
-                className={`px-4 py-2 rounded-full font-medium transition-all ${
+                className={`px-4 py-2 rounded-lg font-medium transition-all text-sm ${
                   filterArea === 'all'
-                    ? 'bg-primary-500 text-white shadow-md'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-primary-500 text-white shadow-sm'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-300'
                 }`}
               >
                 All Areas ({totalClinics})
@@ -115,9 +121,9 @@ export default function ClinicsPage() {
                   <button
                     key={area}
                     onClick={() => setFilterArea(area)}
-                    className={`px-4 py-2 rounded-full font-medium transition-all ${
+                    className={`px-4 py-2 rounded-lg font-medium transition-all text-sm ${
                       filterArea === area
-                        ? 'bg-primary-500 text-white shadow-md'
+                        ? 'bg-primary-500 text-white shadow-sm'
                         : 'bg-white text-gray-700 hover:bg-primary-50 border border-gray-200'
                     }`}
                   >
@@ -130,21 +136,21 @@ export default function ClinicsPage() {
 
           {/* Active filters summary */}
           {(filterArea !== 'all' || searchQuery) && (
-            <div className="mt-4 flex items-center gap-3 text-sm">
+            <div className="mt-4 flex items-center gap-2 text-sm">
               <span className="text-gray-600 font-medium">Active filters:</span>
               {filterArea !== 'all' && (
-                <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full flex items-center gap-2">
+                <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full flex items-center gap-1.5">
                   Area: {filterArea}
                   <button onClick={() => setFilterArea('all')} className="hover:text-primary-900">
-                    ✕
+                    <XIcon className="w-3.5 h-3.5" />
                   </button>
                 </span>
               )}
               {searchQuery && (
-                <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full flex items-center gap-2">
+                <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full flex items-center gap-1.5">
                   Search: "{searchQuery}"
                   <button onClick={() => setSearchQuery('')} className="hover:text-primary-900">
-                    ✕
+                    <XIcon className="w-3.5 h-3.5" />
                   </button>
                 </span>
               )}
@@ -153,7 +159,7 @@ export default function ClinicsPage() {
         </div>
 
         {/* Results Count */}
-        <div className="mb-6 flex items-center justify-between">
+        <div className="mb-5">
           <p className="text-gray-600">
             {clinics.length === 0 ? (
               <span className="text-red-600">No clinics found matching your criteria</span>
@@ -167,31 +173,31 @@ export default function ClinicsPage() {
         </div>
 
         {/* Clinic Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {clinics.map((clinic: any, i) => (
             <a
               key={clinic.slug}
               href={`/clinics/${clinic.slug}`}
-              className="clinic-card glass-card p-6 rounded-2xl block group animate-scale-in"
+              className="clinic-card glass-card p-5 rounded-xl block group"
               style={{animationDelay: `${(i % 12) * 0.03}s`}}
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
-                  <h3 className="font-bold text-lg text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                  <h3 className="font-bold text-base text-gray-900 mb-1.5 group-hover:text-primary-600 transition-colors">
                     {clinic.name}
                   </h3>
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <span className="text-lg">📍</span>
+                  <div className="flex items-center gap-1.5 text-sm text-gray-500">
+                    <LocationIcon className="w-4 h-4" />
                     <span>{clinic.area}</span>
                   </div>
                 </div>
-                <div className="flex flex-col items-end gap-1">
-                  <div className="flex items-center gap-1 bg-yellow-50 px-3 py-1.5 rounded-full">
-                    <span className="text-yellow-500 text-lg">⭐</span>
-                    <span className="font-bold text-gray-900">{clinic.rating}</span>
+                <div className="flex flex-col items-end">
+                  <div className="flex items-center gap-1 bg-yellow-50 px-2.5 py-1.5 rounded-lg">
+                    <StarIcon className="w-4 h-4 text-yellow-500" filled />
+                    <span className="font-bold text-gray-900 text-sm">{clinic.rating}</span>
                   </div>
-                  <span className="text-xs text-gray-400">
+                  <span className="text-xs text-gray-400 mt-1">
                     {clinic.reviewCount.toLocaleString()} reviews
                   </span>
                 </div>
@@ -199,18 +205,18 @@ export default function ClinicsPage() {
 
               {/* Services Tags */}
               {clinic.services && clinic.services.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {clinic.services.slice(0, 3).map((service: string) => (
                     <span 
                       key={service} 
-                      className="bg-primary-50 text-primary-700 px-2.5 py-1 rounded-lg text-xs font-medium"
+                      className="bg-primary-50 text-primary-700 px-2 py-1 rounded-md text-xs font-medium"
                     >
                       {service}
                     </span>
                   ))}
                   {clinic.services.length > 3 && (
-                    <span className="bg-gray-100 text-gray-600 px-2.5 py-1 rounded-lg text-xs font-medium">
-                      +{clinic.services.length - 3} more
+                    <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md text-xs font-medium">
+                      +{clinic.services.length - 3}
                     </span>
                   )}
                 </div>
@@ -218,13 +224,14 @@ export default function ClinicsPage() {
 
               {/* Footer */}
               <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                <span className="text-primary-600 font-semibold text-sm group-hover:underline">
-                  View Details →
+                <span className="text-primary-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span>View Details</span>
+                  <ArrowRightIcon className="w-4 h-4" />
                 </span>
                 {clinic.phone && (
                   <div className="flex items-center gap-1 text-xs text-gray-400">
-                    <span className="text-green-500">📞</span>
-                    <span>Call Available</span>
+                    <PhoneIcon className="w-3.5 h-3.5 text-green-500" />
+                    <span>Available</span>
                   </div>
                 )}
               </div>
@@ -234,8 +241,10 @@ export default function ClinicsPage() {
 
         {/* No Results */}
         {clinics.length === 0 && (
-          <div className="text-center py-16">
-            <div className="text-6xl mb-4">🔍</div>
+          <div className="text-center py-16 bg-white rounded-xl">
+            <div className="flex justify-center mb-4">
+              <SearchIcon className="w-16 h-16 text-gray-300" />
+            </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">No clinics found</h3>
             <p className="text-gray-600 mb-6">
               Try adjusting your search or filters
