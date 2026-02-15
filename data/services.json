@@ -1,0 +1,233 @@
+[
+  {
+    "name": "General Dentistry",
+    "slug": "general",
+    "description": "Comprehensive dental care including check-ups, cleanings, fillings, and preventive treatments",
+    "icon": "tooth",
+    "treatments": [
+      "Dental Examination",
+      "Professional Cleaning (Scaling & Polishing)",
+      "Dental Fillings",
+      "Tooth Extraction",
+      "Fluoride Treatment",
+      "Dental Sealants"
+    ],
+    "priceRange": "AED 100 - AED 500"
+  },
+  {
+    "name": "Cosmetic Dentistry",
+    "slug": "cosmetic",
+    "description": "Smile enhancement procedures to improve the appearance of teeth",
+    "icon": "sparkles",
+    "treatments": [
+      "Teeth Whitening",
+      "Porcelain Veneers",
+      "Composite Veneers",
+      "Dental Bonding",
+      "Smile Makeover",
+      "Gum Contouring"
+    ],
+    "priceRange": "AED 500 - AED 20,000"
+  },
+  {
+    "name": "Dental Implants",
+    "slug": "implants",
+    "description": "Permanent tooth replacement solutions using titanium implants",
+    "icon": "implant",
+    "treatments": [
+      "Single Tooth Implant",
+      "Multiple Teeth Implants",
+      "All-on-4 Implants",
+      "All-on-6 Implants",
+      "Implant-Supported Dentures",
+      "Bone Grafting"
+    ],
+    "priceRange": "AED 5,000 - AED 60,000"
+  },
+  {
+    "name": "Orthodontics",
+    "slug": "orthodontics",
+    "description": "Teeth alignment and bite correction treatments",
+    "icon": "braces",
+    "treatments": [
+      "Metal Braces",
+      "Ceramic Braces",
+      "Invisalign Clear Aligners",
+      "Clear Aligners",
+      "Lingual Braces",
+      "Retainers"
+    ],
+    "priceRange": "AED 8,000 - AED 25,000"
+  },
+  {
+    "name": "Root Canal Treatment",
+    "slug": "root-canal",
+    "description": "Endodontic treatment to save infected or damaged teeth",
+    "icon": "root",
+    "treatments": [
+      "Single Root Canal",
+      "Multi-Root Canal",
+      "Root Canal Retreatment",
+      "Apicoectomy",
+      "Pulp Capping"
+    ],
+    "priceRange": "AED 800 - AED 3,000"
+  },
+  {
+    "name": "Pediatric Dentistry",
+    "slug": "pediatric",
+    "description": "Specialized dental care for children and teenagers",
+    "icon": "child",
+    "treatments": [
+      "Child Dental Check-up",
+      "Pediatric Cleaning",
+      "Dental Sealants",
+      "Fluoride Treatment",
+      "Space Maintainers",
+      "Pulpotomy"
+    ],
+    "priceRange": "AED 150 - AED 1,500"
+  },
+  {
+    "name": "Oral Surgery",
+    "slug": "oral-surgery",
+    "description": "Surgical procedures for complex dental conditions",
+    "icon": "surgery",
+    "treatments": [
+      "Wisdom Tooth Extraction",
+      "Surgical Extraction",
+      "Bone Grafting",
+      "Sinus Lift",
+      "Jaw Surgery",
+      "Cyst Removal"
+    ],
+    "priceRange": "AED 1,000 - AED 15,000"
+  },
+  {
+    "name": "Teeth Whitening",
+    "slug": "whitening",
+    "description": "Professional teeth brightening treatments",
+    "icon": "whitening",
+    "treatments": [
+      "In-Office Laser Whitening",
+      "Zoom Whitening",
+      "Take-Home Whitening Kit",
+      "Beyond Whitening"
+    ],
+    "priceRange": "AED 500 - AED 2,500"
+  },
+  {
+    "name": "Veneers",
+    "slug": "veneers",
+    "description": "Thin shells to cover and transform tooth appearance",
+    "icon": "veneer",
+    "treatments": [
+      "Porcelain Veneers",
+      "E-max Veneers",
+      "Composite Veneers",
+      "Lumineers",
+      "Full Mouth Veneers"
+    ],
+    "priceRange": "AED 800 - AED 5,000 per tooth"
+  },
+  {
+    "name": "Crowns & Bridges",
+    "slug": "crowns-bridges",
+    "description": "Tooth restoration and replacement options",
+    "icon": "crown",
+    "treatments": [
+      "Porcelain Crown",
+      "Zirconia Crown",
+      "E-max Crown",
+      "Metal Crown",
+      "Dental Bridge",
+      "Maryland Bridge"
+    ],
+    "priceRange": "AED 1,000 - AED 4,000 per unit"
+  },
+  {
+    "name": "Dentures",
+    "slug": "dentures",
+    "description": "Removable tooth replacement solutions",
+    "icon": "dentures",
+    "treatments": [
+      "Full Dentures",
+      "Partial Dentures",
+      "Immediate Dentures",
+      "Implant-Supported Dentures",
+      "Flexible Dentures"
+    ],
+    "priceRange": "AED 2,000 - AED 15,000"
+  },
+  {
+    "name": "Gum Treatment (Periodontics)",
+    "slug": "periodontics",
+    "description": "Treatment for gum disease and gum health",
+    "icon": "gum",
+    "treatments": [
+      "Deep Cleaning (Scaling & Root Planing)",
+      "Gum Surgery",
+      "Gum Grafting",
+      "Crown Lengthening",
+      "Pocket Reduction",
+      "Laser Gum Treatment"
+    ],
+    "priceRange": "AED 300 - AED 8,000"
+  },
+  {
+    "name": "Invisalign",
+    "slug": "invisalign",
+    "description": "Clear aligner treatment for discreet teeth straightening",
+    "icon": "aligner",
+    "treatments": [
+      "Invisalign Full",
+      "Invisalign Lite",
+      "Invisalign Express",
+      "Invisalign Teen",
+      "Invisalign First (Kids)"
+    ],
+    "priceRange": "AED 10,000 - AED 25,000"
+  },
+  {
+    "name": "Emergency Dentistry",
+    "slug": "emergency",
+    "description": "Urgent dental care for immediate relief",
+    "icon": "emergency",
+    "treatments": [
+      "Toothache Relief",
+      "Broken Tooth Repair",
+      "Lost Filling Replacement",
+      "Dental Abscess Treatment",
+      "Knocked-Out Tooth Treatment"
+    ],
+    "priceRange": "AED 200 - AED 2,000"
+  },
+  {
+    "name": "Holistic Dentistry",
+    "slug": "holistic",
+    "description": "Natural and biocompatible dental treatments",
+    "icon": "leaf",
+    "treatments": [
+      "Mercury-Free Fillings",
+      "Biocompatible Materials",
+      "Ozone Therapy",
+      "Natural Dental Care",
+      "Safe Amalgam Removal"
+    ],
+    "priceRange": "AED 300 - AED 3,000"
+  },
+  {
+    "name": "TMJ Treatment",
+    "slug": "tmj",
+    "description": "Treatment for jaw joint disorders and related issues",
+    "icon": "jaw",
+    "treatments": [
+      "TMJ Diagnosis",
+      "Night Guards",
+      "Bite Adjustment",
+      "TMJ Therapy",
+      "Botox for TMJ"
+    ],
+    "priceRange": "AED 500 - AED 5,000"
+  }
+]

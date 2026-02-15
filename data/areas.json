@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Dubai Marina",
+    "slug": "dubai-marina",
+    "clinicCount": 8,
+    "description": "Upscale waterfront community with premium dental clinics",
+    "lat": 25.0773,
+    "lng": 55.1391,
+    "popular": true
+  },
+  {
+    "name": "JBR",
+    "slug": "jbr",
+    "clinicCount": 3,
+    "description": "Jumeirah Beach Residence - beachfront living with quality dental care",
+    "lat": 25.0800,
+    "lng": 55.1350,
+    "popular": true
+  },
+  {
+    "name": "JLT",
+    "slug": "jlt",
+    "clinicCount": 4,
+    "description": "Jumeirah Lakes Towers - affordable family dental clinics",
+    "lat": 25.0670,
+    "lng": 55.1450,
+    "popular": true
+  },
+  {
+    "name": "Jumeirah",
+    "slug": "jumeirah",
+    "clinicCount": 12,
+    "description": "Prestigious residential area with premium dental clinics",
+    "lat": 25.2128,
+    "lng": 55.2550,
+    "popular": true
+  },
+  {
+    "name": "Downtown Dubai",
+    "slug": "downtown-dubai",
+    "clinicCount": 5,
+    "description": "Heart of Dubai near Burj Khalifa with luxury dental services",
+    "lat": 25.1972,
+    "lng": 55.2744,
+    "popular": true
+  },
+  {
+    "name": "Business Bay",
+    "slug": "business-bay",
+    "clinicCount": 6,
+    "description": "Modern business district with professional dental clinics",
+    "lat": 25.1850,
+    "lng": 55.2650,
+    "popular": true
+  },
+  {
+    "name": "DIFC",
+    "slug": "difc",
+    "clinicCount": 2,
+    "description": "Dubai International Financial Centre - executive dental care",
+    "lat": 25.2129,
+    "lng": 55.2820,
+    "popular": true
+  },
+  {
+    "name": "Sheikh Zayed Road",
+    "slug": "sheikh-zayed-road",
+    "clinicCount": 4,
+    "description": "Main artery of Dubai with convenient dental locations",
+    "lat": 25.2100,
+    "lng": 55.2700,
+    "popular": true
+  },
+  {
+    "name": "Al Barsha",
+    "slug": "al-barsha",
+    "clinicCount": 10,
+    "description": "Popular residential area near Mall of Emirates with many dental options",
+    "lat": 25.1097,
+    "lng": 55.1970,
+    "popular": true
+  },
+  {
+    "name": "Deira",
+    "slug": "deira",
+    "clinicCount": 9,
+    "description": "Traditional Dubai with affordable dental clinics",
+    "lat": 25.2713,
+    "lng": 55.3192,
+    "popular": true
+  },
+  {
+    "name": "Bur Dubai",
+    "slug": "bur-dubai",
+    "clinicCount": 10,
+    "description": "Historic area with diverse dental options including BurJuman",
+    "lat": 25.2500,
+    "lng": 55.2900,
+    "popular": true
+  },
+  {
+    "name": "The Greens",
+    "slug": "the-greens",
+    "clinicCount": 1,
+    "description": "Residential community with convenient dental access",
+    "lat": 25.0948,
+    "lng": 55.1648,
+    "popular": false
+  },
+  {
+    "name": "City Walk",
+    "slug": "city-walk",
+    "clinicCount": 1,
+    "description": "Trendy lifestyle destination with modern dental clinics",
+    "lat": 25.2042,
+    "lng": 55.2620,
+    "popular": false
+  },
+  {
+    "name": "Al Garhoud",
+    "slug": "al-garhoud",
+    "clinicCount": 1,
+    "description": "Near Dubai Airport with hospital dental services",
+    "lat": 25.2505,
+    "lng": 55.3426,
+    "popular": false
+  },
+  {
+    "name": "Umm Suqeim",
+    "slug": "umm-suqeim",
+    "clinicCount": 2,
+    "description": "Beachside area with quality dental clinics",
+    "lat": 25.1543,
+    "lng": 55.2012,
+    "popular": false
+  },
+  {
+    "name": "Karama",
+    "slug": "karama",
+    "clinicCount": 3,
+    "description": "Affordable area with budget-friendly dental options",
+    "lat": 25.2450,
+    "lng": 55.3050,
+    "popular": false
+  },
+  {
+    "name": "Al Quoz",
+    "slug": "al-quoz",
+    "clinicCount": 2,
+    "description": "Industrial-turned-creative hub with dental clinics",
+    "lat": 25.1300,
+    "lng": 55.2300,
+    "popular": false
+  },
+  {
+    "name": "Motor City",
+    "slug": "motor-city",
+    "clinicCount": 1,
+    "description": "Family community with local dental services",
+    "lat": 25.0450,
+    "lng": 55.2400,
+    "popular": false
+  },
+  {
+    "name": "Silicon Oasis",
+    "slug": "silicon-oasis",
+    "clinicCount": 2,
+    "description": "Tech hub with modern dental facilities",
+    "lat": 25.1150,
+    "lng": 55.3850,
+    "popular": false
+  },
+  {
+    "name": "International City",
+    "slug": "international-city",
+    "clinicCount": 3,
+    "description": "Diverse community with affordable dental care",
+    "lat": 25.1600,
+    "lng": 55.4100,
+    "popular": false
+  }
+]
