@@ -109,6 +109,12 @@ function Header() {
               <span>Services</span>
             </a>
             <a 
+              href="/blog" 
+              className="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg font-medium transition-all flex items-center gap-2"
+            >
+              <span>Blog</span>
+            </a>
+            <a 
               href="/emergency" 
               className="ml-2 px-5 py-2.5 bg-red-500 hover:bg-red-600 text-white rounded-lg font-semibold transition-all shadow-sm hover:shadow-md flex items-center gap-2"
             >
