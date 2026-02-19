@@ -72,16 +72,67 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
   const isEmergency = clinic.services.some(s => s.toLowerCase().includes('emergency'))
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-warm-50">
+      {/* Schema.org Structured Data - DentalClinic */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Dentist',
+            name: clinic.name,
+            description: clinic.description,
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: clinic.address,
+              addressLocality: clinic.area,
+              addressRegion: 'Dubai',
+              addressCountry: 'AE',
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: clinic.lat,
+              longitude: clinic.lng,
+            },
+            telephone: clinic.phone || undefined,
+            url: clinic.website || `https://dubaidentalclinics.com/clinics/${clinic.slug}`,
+            aggregateRating: clinic.reviewCount > 0 ? {
+              '@type': 'AggregateRating',
+              ratingValue: clinic.rating,
+              reviewCount: clinic.reviewCount,
+              bestRating: 5,
+              worstRating: 1,
+            } : undefined,
+            openingHours: clinic.hours,
+            medicalSpecialty: 'Dentistry',
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://dubaidentalclinics.com' },
+              { '@type': 'ListItem', position: 2, name: 'Clinics', item: 'https://dubaidentalclinics.com/clinics' },
+              { '@type': 'ListItem', position: 3, name: clinic.area, item: `https://dubaidentalclinics.com/dentists/${areaSlug}` },
+              { '@type': 'ListItem', position: 4, name: clinic.name },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero Section with Image */}
-      <div className="relative h-96 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+      <div className="relative h-96 overflow-hidden bg-gradient-to-br from-brand-100 to-brand-50">
         <ClinicImage slug={clinic.slug} name={clinic.name} area={clinic.area} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
         
         <div className="absolute bottom-0 left-0 right-0 text-white pb-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumbs */}
-            <nav className="text-sm mb-5 text-blue-100 breadcrumb" aria-label="Breadcrumb">
+            <nav className="text-sm mb-5 text-brand-100 breadcrumb" aria-label="Breadcrumb">
               <ol className="flex items-center flex-wrap gap-2">
                 <li><a href="/" className="hover:text-white">Home</a></li>
                 <li><span className="mx-1">/</span></li>
@@ -133,7 +184,7 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
             {/* About */}
             <div className="glass-card rounded-xl p-6">
               <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-                <ToothIcon className="w-5 h-5 text-primary-600" />
+                <ToothIcon className="w-5 h-5 text-brand-600" />
                 <span>About This Clinic</span>
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -144,17 +195,17 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
             {/* Services */}
             <div className="glass-card rounded-xl p-6">
               <h2 className="text-xl font-bold mb-5 flex items-center gap-2">
-                <MedicalIcon className="w-5 h-5 text-primary-600" />
+                <MedicalIcon className="w-5 h-5 text-brand-600" />
                 <span>Services Offered</span>
               </h2>
               <div className="grid md:grid-cols-2 gap-2.5">
                 {clinic.services.map((service: string) => (
                   <div
                     key={service}
-                    className="flex items-center gap-2.5 bg-primary-50 p-3 rounded-lg border border-primary-100"
+                    className="flex items-center gap-2.5 bg-brand-50 p-3 rounded-lg border border-brand-100"
                   >
                     <div className="flex-shrink-0">
-                      <CheckIcon className="w-5 h-5 text-primary-600" />
+                      <CheckIcon className="w-5 h-5 text-brand-600" />
                     </div>
                     <span className="font-medium text-gray-900 text-sm">{service}</span>
                   </div>
@@ -165,7 +216,7 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
             {/* Location */}
             <div className="glass-card rounded-xl p-6">
               <h2 className="text-xl font-bold mb-5 flex items-center gap-2">
-                <LocationIcon className="w-5 h-5 text-primary-600" />
+                <LocationIcon className="w-5 h-5 text-brand-600" />
                 <span>Location & Directions</span>
               </h2>
               
@@ -206,13 +257,13 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
             {/* Reviews */}
             <div className="glass-card rounded-xl p-6">
               <h2 className="text-xl font-bold mb-5 flex items-center gap-2">
-                <StarIcon className="w-5 h-5 text-primary-600" filled />
+                <StarIcon className="w-5 h-5 text-brand-600" filled />
                 <span>Patient Reviews</span>
               </h2>
               
               <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-lg mb-5 text-center border border-yellow-200">
                 <div className="flex items-center justify-center gap-4 mb-4">
-                  <div className="text-5xl font-bold text-primary-600">{clinic.rating}</div>
+                  <div className="text-5xl font-bold text-brand-600">{clinic.rating}</div>
                   <div className="text-left">
                     <div className="flex gap-0.5 mb-1">
                       {[...Array(5)].map((_, i) => (
@@ -247,7 +298,7 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
             {nearbyClinics.length > 0 && (
               <div className="glass-card rounded-xl p-6">
                 <h2 className="text-xl font-bold mb-5 flex items-center gap-2">
-                  <HospitalIcon className="w-5 h-5 text-primary-600" />
+                  <HospitalIcon className="w-5 h-5 text-brand-600" />
                   <span>Other Clinics in {clinic.area}</span>
                 </h2>
                 
@@ -256,10 +307,10 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
                     <a
                       key={nearby.slug}
                       href={`/clinics/${nearby.slug}`}
-                      className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 hover:border-primary-300 hover:shadow-sm transition-all group"
+                      className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 hover:border-brand-300 hover:shadow-sm transition-all group"
                     >
                       <div className="flex-1">
-                        <div className="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors text-sm">
+                        <div className="font-semibold text-gray-900 group-hover:text-brand-600 transition-colors text-sm">
                           {nearby.name}
                         </div>
                         <div className="text-xs text-gray-500 mt-1">
@@ -271,14 +322,14 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
                           <StarIcon className="w-4 h-4 text-yellow-500" filled />
                           <span className="font-bold text-gray-900 text-sm">{nearby.rating}</span>
                         </div>
-                        <ArrowRightIcon className="w-4 h-4 text-gray-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
+                        <ArrowRightIcon className="w-4 h-4 text-gray-400 group-hover:text-brand-600 group-hover:translate-x-1 transition-all" />
                       </div>
                     </a>
                   ))}
                 </div>
 
                 <div className="mt-5 text-center">
-                  <a href={`/dentists/${areaSlug}`} className="text-primary-600 font-semibold hover:underline text-sm flex items-center justify-center gap-1">
+                  <a href={`/dentists/${areaSlug}`} className="text-brand-600 font-semibold hover:underline text-sm flex items-center justify-center gap-1">
                     <span>View all clinics in {clinic.area}</span>
                     <ArrowRightIcon className="w-4 h-4" />
                   </a>
@@ -292,7 +343,7 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
             {/* Contact Card */}
             <div className="glass-card rounded-xl p-5">
               <h3 className="font-bold text-lg mb-5 flex items-center gap-2">
-                <PhoneIcon className="w-5 h-5 text-primary-600" />
+                <PhoneIcon className="w-5 h-5 text-brand-600" />
                 <span>Contact Information</span>
               </h3>
               
@@ -330,11 +381,11 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
             {/* Opening Hours */}
             <div className="glass-card rounded-xl p-5">
               <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
-                <CalendarIcon className="w-5 h-5 text-primary-600" />
+                <CalendarIcon className="w-5 h-5 text-brand-600" />
                 <span>Opening Hours</span>
               </h3>
               
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg">
+              <div className="bg-gradient-to-br from-brand-50 to-brand-100 p-4 rounded-lg">
                 <div className="text-gray-700 text-sm leading-relaxed whitespace-pre-line">
                   {clinic.hours}
                 </div>
@@ -362,20 +413,20 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
                   href={`https://maps.google.com/?q=${clinic.lat},${clinic.lng}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 bg-white hover:bg-primary-50 border border-gray-200 rounded-lg transition-all group text-sm"
+                  className="flex items-center gap-3 p-3 bg-white hover:bg-brand-50 border border-gray-200 rounded-lg transition-all group text-sm"
                 >
-                  <LocationIcon className="w-4 h-4 text-gray-600 group-hover:text-primary-600" />
-                  <span className="font-medium text-gray-700 group-hover:text-primary-600">
+                  <LocationIcon className="w-4 h-4 text-gray-600 group-hover:text-brand-600" />
+                  <span className="font-medium text-gray-700 group-hover:text-brand-600">
                     Get Directions
                   </span>
                 </a>
 
                 <a
                   href={`/dentists/${areaSlug}`}
-                  className="flex items-center gap-3 p-3 bg-white hover:bg-primary-50 border border-gray-200 rounded-lg transition-all group text-sm"
+                  className="flex items-center gap-3 p-3 bg-white hover:bg-brand-50 border border-gray-200 rounded-lg transition-all group text-sm"
                 >
-                  <HospitalIcon className="w-4 h-4 text-gray-600 group-hover:text-primary-600" />
-                  <span className="font-medium text-gray-700 group-hover:text-primary-600">
+                  <HospitalIcon className="w-4 h-4 text-gray-600 group-hover:text-brand-600" />
+                  <span className="font-medium text-gray-700 group-hover:text-brand-600">
                     More in {clinic.area}
                   </span>
                 </a>
@@ -385,55 +436,6 @@ export default function ClinicPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      {/* Schema.org Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Dentist',
-            name: clinic.name,
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: clinic.address,
-              addressLocality: clinic.area,
-              addressRegion: 'Dubai',
-              addressCountry: 'AE',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: clinic.lat,
-              longitude: clinic.lng,
-            },
-            telephone: clinic.phone,
-            url: clinic.website || undefined,
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: clinic.rating,
-              reviewCount: clinic.reviewCount,
-              bestRating: 5,
-              worstRating: 1,
-            },
-            openingHours: clinic.hours,
-          }),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://dubaidentalclinics.com' },
-              { '@type': 'ListItem', position: 2, name: 'Clinics', item: 'https://dubaidentalclinics.com/clinics' },
-              { '@type': 'ListItem', position: 3, name: clinic.area, item: `https://dubaidentalclinics.com/dentists/${areaSlug}` },
-              { '@type': 'ListItem', position: 4, name: clinic.name },
-            ],
-          }),
-        }}
-      />
     </div>
   )
 }

@@ -39,7 +39,7 @@ export default function ClinicsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-warm-50">
       {/* Hero Section */}
       <section className="bg-gradient-dental text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,7 +110,7 @@ export default function ClinicsPage() {
                 onClick={() => setFilterArea('all')}
                 className={`px-4 py-2 rounded-lg font-medium transition-all text-sm ${
                   filterArea === 'all'
-                    ? 'bg-primary-500 text-white shadow-sm'
+                    ? 'bg-brand-500 text-white shadow-sm'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-300'
                 }`}
               >
@@ -124,8 +124,8 @@ export default function ClinicsPage() {
                     onClick={() => setFilterArea(area)}
                     className={`px-4 py-2 rounded-lg font-medium transition-all text-sm ${
                       filterArea === area
-                        ? 'bg-primary-500 text-white shadow-sm'
-                        : 'bg-white text-gray-700 hover:bg-primary-50 border border-gray-200'
+                        ? 'bg-brand-500 text-white shadow-sm'
+                        : 'bg-white text-gray-700 hover:bg-brand-50 border border-gray-200'
                     }`}
                   >
                     {area} ({count})
@@ -140,7 +140,7 @@ export default function ClinicsPage() {
             <div className="mt-4 flex items-center gap-2 text-sm">
               <span className="text-gray-600 font-medium">Active filters:</span>
               {filterArea !== 'all' && (
-                <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full flex items-center gap-1.5">
+                <span className="bg-primary-100 text-brand-700 px-3 py-1 rounded-full flex items-center gap-1.5">
                   Area: {filterArea}
                   <button onClick={() => setFilterArea('all')} className="hover:text-primary-900">
                     <XIcon className="w-3.5 h-3.5" />
@@ -148,7 +148,7 @@ export default function ClinicsPage() {
                 </span>
               )}
               {searchQuery && (
-                <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full flex items-center gap-1.5">
+                <span className="bg-primary-100 text-brand-700 px-3 py-1 rounded-full flex items-center gap-1.5">
                   Search: "{searchQuery}"
                   <button onClick={() => setSearchQuery('')} className="hover:text-primary-900">
                     <XIcon className="w-3.5 h-3.5" />
@@ -166,7 +166,7 @@ export default function ClinicsPage() {
               <span className="text-red-600">No clinics found matching your criteria</span>
             ) : (
               <>
-                Showing <span className="font-bold text-primary-600">{clinics.length}</span> 
+                Showing <span className="font-bold text-brand-600">{clinics.length}</span> 
                 {clinics.length === 1 ? ' clinic' : ' clinics'}
               </>
             )}
@@ -194,7 +194,7 @@ export default function ClinicsPage() {
               {/* Card Content */}
               <div className="p-5">
                 <div className="mb-4">
-                  <h3 className="font-bold text-base text-gray-900 mb-1.5 group-hover:text-primary-600 transition-colors">
+                  <h3 className="font-bold text-base text-gray-900 mb-1.5 group-hover:text-brand-600 transition-colors">
                     {clinic.name}
                   </h3>
                   <div className="flex items-center gap-1.5 text-sm text-gray-500">
@@ -212,7 +212,7 @@ export default function ClinicsPage() {
                     {clinic.services.slice(0, 3).map((service: string) => (
                       <span 
                         key={service} 
-                        className="bg-primary-50 text-primary-700 px-2 py-1 rounded-md text-xs font-medium"
+                        className="bg-brand-50 text-brand-700 px-2 py-1 rounded-md text-xs font-medium"
                       >
                         {service}
                       </span>
@@ -227,7 +227,7 @@ export default function ClinicsPage() {
 
                 {/* Footer */}
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <span className="text-primary-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span className="text-brand-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                     <span>View Details</span>
                     <ArrowRightIcon className="w-4 h-4" />
                   </span>

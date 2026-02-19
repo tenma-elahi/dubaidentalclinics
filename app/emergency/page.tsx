@@ -35,7 +35,7 @@ export default function EmergencyPage() {
 
         {/* 24/7 Emergency Clinics */}
         <h2 className="text-2xl font-bold mb-5 flex items-center gap-2">
-          <HospitalIcon className="w-6 h-6 text-primary-600" />
+          <HospitalIcon className="w-6 h-6 text-brand-600" />
           <span>24/7 Emergency Dental Clinics in Dubai</span>
         </h2>
         
@@ -62,7 +62,7 @@ export default function EmergencyPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <PhoneIcon className="w-4 h-4 text-gray-600 flex-shrink-0" />
-                  <a href={`tel:${clinic.phone}`} className="text-primary-600 font-medium hover:underline">{clinic.phone}</a>
+                  <a href={`tel:${clinic.phone}`} className="text-brand-600 font-medium hover:underline">{clinic.phone}</a>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -75,7 +75,7 @@ export default function EmergencyPage() {
                 </a>
                 <a
                   href={clinic.clinicUrl}
-                  className="flex-1 border border-gray-300 text-gray-700 text-center py-2.5 rounded-lg font-semibold hover:bg-gray-50 transition-all flex items-center justify-center gap-2"
+                  className="flex-1 border border-gray-300 text-gray-700 text-center py-2.5 rounded-lg font-semibold hover:bg-warm-50 transition-all flex items-center justify-center gap-2"
                 >
                   <span>View Clinic</span>
                   <ArrowRightIcon className="w-4 h-4" />

@@ -9,48 +9,66 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Professional dental blues with fresh mint accents
-        primary: {
-          50: '#e6f2ff',
-          100: '#cce5ff',
-          200: '#99ccff',
-          300: '#66b2ff',
-          400: '#3399ff',
-          500: '#0066cc', // Main dental blue
-          600: '#0052a3',
-          700: '#003d7a',
-          800: '#002952',
-          900: '#001429',
+        // Warm Teal - Per Dubai Listings Playbook
+        brand: {
+          50: '#effefb',
+          100: '#c9fef4',
+          200: '#93fce9',
+          300: '#56f2db',
+          400: '#22decc',
+          500: '#09c2b2', // Primary brand
+          600: '#049d92',
+          700: '#087d76',
+          800: '#0c635f',
+          900: '#0f524f',
         },
-        accent: {
-          50: '#e6fffa',
-          100: '#b3fff0',
-          200: '#80ffe6',
-          300: '#4dffdc',
-          400: '#1affd1',
-          500: '#00e6b8', // Fresh mint/teal
-          600: '#00b38f',
-          700: '#008066',
-          800: '#004d3d',
-          900: '#001a14',
+        // Coral accent
+        coral: {
+          400: '#ff8a72',
+          500: '#f86545',
+          600: '#e54a28',
+        },
+        // Sunny yellow for ratings
+        sunny: {
+          300: '#fde047',
+          400: '#facc15',
+          600: '#ca8a04',
+        },
+        // Warm neutrals - NOT pure white
+        warm: {
+          50: '#fdfbf7',
+          100: '#faf6f0',
+          200: '#f5ede0',
+          300: '#ebe0cb',
+        },
+        // Keep primary/accent as aliases
+        primary: {
+          50: '#effefb',
+          100: '#c9fef4',
+          200: '#93fce9',
+          300: '#56f2db',
+          400: '#22decc',
+          500: '#09c2b2',
+          600: '#049d92',
+          700: '#087d76',
+          800: '#0c635f',
+          900: '#0f524f',
         },
       },
       backgroundImage: {
-        'gradient-dental': 'linear-gradient(135deg, #0066cc 0%, #0080e6 50%, #00e6b8 100%)',
+        'gradient-dental': 'linear-gradient(135deg, #087d76 0%, #09c2b2 50%, #22decc 100%)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-subtle': 'linear-gradient(to bottom, #ffffff, #f8fbff)',
+        'gradient-subtle': 'linear-gradient(to bottom, #fdfbf7, #faf6f0)',
       },
       boxShadow: {
-        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
-        'glass-lg': '0 12px 48px 0 rgba(31, 38, 135, 0.2)',
+        'glass': '0 8px 32px 0 rgba(9, 194, 178, 0.12)',
+        'glass-lg': '0 12px 48px 0 rgba(9, 194, 178, 0.18)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'slide-down': 'slideDown 0.3s ease-out',
         'scale-in': 'scaleIn 0.3s ease-out',
-        'float': 'float 3s ease-in-out infinite',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         fadeIn: {
@@ -68,10 +86,6 @@ const config: Config = {
         scaleIn: {
           '0%': { transform: 'scale(0.95)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
         },
       },
     },

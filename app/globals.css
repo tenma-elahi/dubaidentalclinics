@@ -4,14 +4,17 @@
 
 @layer base {
   :root {
-    --primary: #0066cc;
-    --accent: #00b8a9;
+    --primary: #09c2b2;
+    --primary-dark: #087d76;
+    --accent: #f86545;
+    --warm-bg: #fdfbf7;
   }
 
   body {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--warm-bg);
   }
 
   html {
@@ -20,53 +23,36 @@
 }
 
 @layer components {
-  /* Hero Gradient - More Subtle */
   .hero-gradient {
-    background: linear-gradient(135deg, #0066cc 0%, #0080dd 100%);
+    background: linear-gradient(135deg, #087d76 0%, #09c2b2 100%);
     position: relative;
   }
 
-  /* Clean Card - No Glassmorphism */
   .glass-card {
     background: white;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid #f5ede0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
   }
 
-  /* Clinic Card with Subtle Hover */
   .clinic-card {
     transition: all 0.2s ease;
     position: relative;
+    background: white;
+    border: 1px solid #f5ede0;
+    border-radius: 1rem;
   }
 
   .clinic-card:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 25px -5px rgba(9, 194, 178, 0.15);
+    border-color: #c9fef4;
   }
 
-  /* Star Rating */
   .star-rating {
-    color: #f59e0b;
+    color: #facc15;
     display: inline-flex;
     align-items: center;
   }
 
-  /* Animated Counter */
-  @keyframes countUp {
-    from {
-      opacity: 0;
-      transform: translateY(5px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .counter {
-    animation: countUp 0.4s ease-out;
-  }
-
-  /* Search Box Enhancement */
   .search-box {
     transition: all 0.2s;
   }
@@ -74,10 +60,9 @@
   .search-box:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+    box-shadow: 0 0 0 3px rgba(9, 194, 178, 0.15);
   }
 
-  /* Badge Styles */
   .badge {
     @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
   }
@@ -86,160 +71,64 @@
     @apply bg-green-100 text-green-800;
   }
 
-  .badge-closed {
-    @apply bg-gray-100 text-gray-600;
-  }
-
   .badge-emergency {
     @apply bg-red-100 text-red-800;
   }
 
-  /* Gradient Text - Subtle */
   .gradient-text {
-    background: linear-gradient(135deg, #0066cc 0%, #0080dd 100%);
+    background: linear-gradient(135deg, #087d76 0%, #09c2b2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* Service Icon Container */
   .service-icon {
     @apply w-14 h-14 rounded-xl flex items-center justify-center;
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.08) 0%, rgba(0, 184, 169, 0.08) 100%);
+    background: linear-gradient(135deg, rgba(9, 194, 178, 0.1) 0%, rgba(34, 222, 204, 0.08) 100%);
     transition: all 0.2s;
-    color: var(--primary);
+    color: var(--primary-dark);
   }
 
-  .service-icon:hover {
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.12) 0%, rgba(0, 184, 169, 0.12) 100%);
-  }
-
-  /* Button Styles */
   .btn-primary {
-    @apply bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200;
+    @apply bg-brand-500 hover:bg-brand-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200;
+    box-shadow: 0 2px 8px rgba(9, 194, 178, 0.3);
   }
 
   .btn-primary:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 102, 204, 0.2);
+    box-shadow: 0 4px 12px rgba(9, 194, 178, 0.4);
   }
 
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-primary-600 px-6 py-3 rounded-lg font-semibold transition-all duration-200 border border-primary-500;
+    @apply bg-white hover:bg-warm-50 text-brand-700 px-6 py-3 rounded-xl font-semibold transition-all duration-200 border border-brand-200;
   }
 
-  /* Testimonial Card */
-  .testimonial-card {
-    @apply bg-white rounded-xl p-8 border border-gray-200;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  /* Loading Skeleton */
-  @keyframes shimmer {
-    0% {
-      background-position: -1000px 0;
-    }
-    100% {
-      background-position: 1000px 0;
-    }
-  }
-
-  .skeleton {
-    animation: shimmer 2s infinite;
-    background: linear-gradient(to right, #f0f0f0 4%, #e0e0e0 25%, #f0f0f0 36%);
-    background-size: 1000px 100%;
-  }
-
-  /* Breadcrumb */
   .breadcrumb a {
-    @apply text-gray-500 hover:text-primary-600 transition-colors;
+    @apply text-slate-500 hover:text-brand-600 transition-colors;
   }
 
-  /* Feature Grid Item */
-  .feature-item {
-    @apply text-center p-6 rounded-xl transition-all duration-200;
-  }
-
-  .feature-item:hover {
-    @apply bg-white;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  /* Gradient Dental - For Logo */
-  .gradient-dental {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  }
-
-  /* Subtle Background */
   .bg-gradient-subtle {
-    background-color: #fafbfc;
+    background: linear-gradient(to bottom, #fdfbf7, #faf6f0);
   }
 }
 
-/* Utility Classes */
 @layer utilities {
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  /* Simple fade-in for content */
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
-
   .animate-fade-in {
     animation: fadeIn 0.4s ease-out;
   }
 
-  /* Slide down (for trust badges, etc) */
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-slide-down {
-    animation: slideDown 0.4s ease-out;
-  }
-
-  /* Slide up (for features) */
   @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
   .animate-slide-up {
     animation: slideUp 0.4s ease-out;
-  }
-
-  /* Scale in (for cards) */
-  @keyframes scaleIn {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .animate-scale-in {
-    animation: scaleIn 0.3s ease-out;
   }
 }

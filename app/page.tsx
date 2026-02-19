@@ -53,7 +53,7 @@ export default function Home() {
               Find the Best Dentists in Dubai
             </h1>
             
-            <p className="text-lg md:text-xl mb-8 text-blue-50 leading-relaxed">
+            <p className="text-lg md:text-xl mb-8 text-brand-100 leading-relaxed">
               Your smile deserves the best care. Compare {totalClinics}+ verified dental clinics across {uniqueAreas.length} areas. 
               Find your perfect dentist today.
             </p>
@@ -69,7 +69,7 @@ export default function Home() {
                     className="flex-1 py-3 text-gray-900 border-0 focus:outline-none"
                   />
                 </div>
-                <button className="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold transition-all whitespace-nowrap">
+                <button className="bg-brand-500 hover:bg-brand-600 text-white px-6 py-3 rounded-lg font-semibold transition-all whitespace-nowrap">
                   Search
                 </button>
               </div>
@@ -189,7 +189,7 @@ export default function Home() {
                 </div>
                 <div className="p-5">
                   <div className="mb-4">
-                    <h3 className="font-bold text-base text-gray-900 mb-1.5 group-hover:text-primary-600 transition-colors">
+                    <h3 className="font-bold text-base text-gray-900 mb-1.5 group-hover:text-brand-600 transition-colors">
                       {clinic.name}
                     </h3>
                     <div className="flex items-center gap-1.5 text-sm text-gray-500">
@@ -204,7 +204,7 @@ export default function Home() {
                   {clinic.services && clinic.services.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 mb-4">
                       {clinic.services.slice(0, 3).map((service: string) => (
-                        <span key={service} className="bg-primary-50 text-primary-700 px-2 py-1 rounded-md text-xs font-medium">
+                        <span key={service} className="bg-brand-50 text-brand-700 px-2 py-1 rounded-md text-xs font-medium">
                           {service}
                         </span>
                       ))}
@@ -217,7 +217,7 @@ export default function Home() {
                   )}
 
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                    <span className="text-primary-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                    <span className="text-brand-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                       <span>View Details</span>
                       <ArrowRightIcon className="w-4 h-4" />
                     </span>
@@ -259,7 +259,7 @@ export default function Home() {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors text-sm">
+                    <div className="font-semibold text-gray-900 group-hover:text-brand-600 transition-colors text-sm">
                       {area.name}
                     </div>
                     <div className="text-xs text-gray-500 mt-1">
@@ -273,7 +273,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <a href="/clinics" className="text-primary-600 font-semibold hover:underline text-base flex items-center justify-center gap-1">
+            <a href="/clinics" className="text-brand-600 font-semibold hover:underline text-base flex items-center justify-center gap-1">
               <span>View all areas</span>
               <ArrowRightIcon className="w-4 h-4" />
             </a>
@@ -377,10 +377,10 @@ function StatsSection() {
   }, [])
 
   const stats = [
-    { icon: <HospitalIcon className="w-10 h-10 text-primary-600" />, label: 'Dental Clinics', value: counts.clinics, suffix: '+' },
-    { icon: <LocationIcon className="w-10 h-10 text-primary-600" />, label: 'Dubai Areas', value: counts.areas, suffix: '' },
-    { icon: <AlertIcon className="w-10 h-10 text-primary-600" />, label: '24/7 Emergency', value: emergencyClinics, suffix: '+' },
-    { icon: <StarIcon className="w-10 h-10 text-primary-600" filled />, label: 'Average Rating', value: counts.rating, suffix: '' },
+    { icon: <HospitalIcon className="w-10 h-10 text-brand-600" />, label: 'Dental Clinics', value: counts.clinics, suffix: '+' },
+    { icon: <LocationIcon className="w-10 h-10 text-brand-600" />, label: 'Dubai Areas', value: counts.areas, suffix: '' },
+    { icon: <AlertIcon className="w-10 h-10 text-brand-600" />, label: '24/7 Emergency', value: emergencyClinics, suffix: '+' },
+    { icon: <StarIcon className="w-10 h-10 text-brand-600" filled />, label: 'Average Rating', value: counts.rating, suffix: '' },
   ]
 
   return (
@@ -394,7 +394,7 @@ function StatsSection() {
               style={{animationDelay: `${i * 0.1}s`}}
             >
               <div className="flex justify-center mb-3">{stat.icon}</div>
-              <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-1.5">
+              <div className="text-3xl md:text-4xl font-bold text-brand-600 mb-1.5">
                 {stat.value}{stat.suffix}
               </div>
               <div className="text-gray-600 font-medium text-sm">{stat.label}</div>

@@ -29,7 +29,7 @@ function renderMarkdown(content: string) {
   const processInline = (text: string) => {
     return text
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-primary-600 hover:underline">$1</a>')
+      .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-brand-600 hover:underline">$1</a>')
   }
 
   for (let i = 0; i < lines.length; i++) {
@@ -73,7 +73,7 @@ function renderTable(rows: string[]) {
   const dataRows = rows.slice(2).map(parseRow)
 
   return `<div class="overflow-x-auto my-6"><table class="min-w-full border border-gray-200 rounded-lg">
-    <thead><tr class="bg-gray-50">${headers.map(h => `<th class="px-4 py-3 text-left text-sm font-semibold text-gray-900 border-b">${h}</th>`).join('')}</tr></thead>
+    <thead><tr class="bg-warm-50">${headers.map(h => `<th class="px-4 py-3 text-left text-sm font-semibold text-gray-900 border-b">${h}</th>`).join('')}</tr></thead>
     <tbody>${dataRows.map(row => `<tr class="border-b border-gray-100">${row.map(cell => `<td class="px-4 py-3 text-sm text-gray-700">${cell}</td>`).join('')}</tr>`).join('')}</tbody>
   </table></div>`
 }
@@ -96,7 +96,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <article>
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <span className="bg-primary-50 text-primary-700 text-xs font-medium px-2.5 py-1 rounded-full">
+              <span className="bg-brand-50 text-primary-700 text-xs font-medium px-2.5 py-1 rounded-full">
                 {post.category}
               </span>
               <span className="text-gray-400 text-sm">{post.readTime}</span>
@@ -118,7 +118,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <h2 className="text-xl font-bold mb-4">More Articles</h2>
           <div className="grid gap-4">
             {blogPosts.filter(p => p.slug !== post.slug).slice(0, 3).map(p => (
-              <a key={p.slug} href={`/blog/${p.slug}`} className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition">
+              <a key={p.slug} href={`/blog/${p.slug}`} className="flex items-center gap-4 p-4 rounded-lg hover:bg-warm-50 transition">
                 <div>
                   <h3 className="font-semibold text-gray-900">{p.title}</h3>
                   <p className="text-sm text-gray-500 mt-1">{p.readTime}</p>

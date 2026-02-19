@@ -82,12 +82,12 @@ export default function ServicesPage() {
               href={service.slug === 'emergency' ? '/emergency' : `/services/${service.slug}`}
               className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-all group"
             >
-              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-primary-50 to-blue-50 rounded-xl mb-4 text-primary-600 group-hover:scale-105 transition-transform">
+              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-primary-50 to-brand-50 rounded-xl mb-4 text-brand-600 group-hover:scale-105 transition-transform">
                 {service.icon}
               </div>
-              <h2 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-primary-600 transition-colors">{service.name}</h2>
+              <h2 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-brand-600 transition-colors">{service.name}</h2>
               <p className="text-gray-600 leading-relaxed mb-3">{service.description}</p>
-              <span className="inline-flex items-center gap-1 text-primary-600 font-semibold text-sm group-hover:gap-2 transition-all">
+              <span className="inline-flex items-center gap-1 text-brand-600 font-semibold text-sm group-hover:gap-2 transition-all">
                 <span>Find clinics</span>
                 <ArrowRightIcon className="w-4 h-4" />
               </span>

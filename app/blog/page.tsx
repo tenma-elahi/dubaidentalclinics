@@ -33,18 +33,18 @@ export default function BlogPage() {
             >
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-primary-50 text-primary-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                  <span className="bg-brand-50 text-brand-700 text-xs font-medium px-2.5 py-1 rounded-full">
                     {post.category}
                   </span>
                   <span className="text-gray-400 text-xs">{post.readTime}</span>
                 </div>
-                <h2 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-primary-600 transition-colors leading-snug">
+                <h2 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-brand-600 transition-colors leading-snug">
                   {post.title}
                 </h2>
                 <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
                   {post.description}
                 </p>
-                <div className="mt-4 text-primary-600 font-semibold text-sm group-hover:underline">
+                <div className="mt-4 text-brand-600 font-semibold text-sm group-hover:underline">
                   Read more →
                 </div>
               </div>

@@ -696,4 +696,481 @@ Most Dubai dental clinics offer interest-free payment plans for orthodontic trea
 [Compare orthodontic clinics →](/clinics)
     `.trim(),
   },
+  {
+    slug: 'wisdom-tooth-removal-cost-dubai',
+    title: 'Wisdom Tooth Removal Cost in Dubai 2026: Prices & Recovery Guide',
+    description: 'How much does wisdom tooth extraction cost in Dubai? Compare simple vs surgical removal prices, recovery tips, and when extraction is necessary.',
+    date: '2026-02-18',
+    readTime: '7 min read',
+    category: 'Costs & Pricing',
+    content: `
+## Wisdom Tooth Removal Cost in Dubai
+
+Wisdom tooth extraction in Dubai costs between **AED 500 and AED 3,500 per tooth**, depending on whether it's a simple or surgical extraction. Most people have four wisdom teeth, so total costs for removing all four range from **AED 2,000 to AED 12,000**.
+
+### Price Breakdown
+
+| Procedure | Price Range (AED) | Price Range (USD) |
+|-----------|-------------------|-------------------|
+| Simple extraction (erupted tooth) | 500 – 1,000 | 136 – 272 |
+| Surgical extraction (partially erupted) | 1,500 – 2,500 | 408 – 680 |
+| Impacted tooth (bone removal needed) | 2,000 – 3,500 | 545 – 953 |
+| All four wisdom teeth (simple) | 2,000 – 4,000 | 545 – 1,090 |
+| All four wisdom teeth (surgical) | 6,000 – 12,000 | 1,635 – 3,267 |
+| Sedation/general anesthesia (add-on) | 2,000 – 5,000 | 545 – 1,360 |
+
+### Simple vs. Surgical Extraction
+
+**Simple extraction** is performed when the wisdom tooth has fully erupted and is visible. The dentist loosens the tooth and removes it with forceps. Recovery is typically 2-3 days.
+
+**Surgical extraction** is needed when the tooth is partially erupted, impacted (stuck under the gum or bone), or growing at an angle. An oral surgeon makes an incision, may remove some bone, and sometimes sections the tooth for easier removal. Recovery takes 5-7 days.
+
+### When Should You Remove Wisdom Teeth?
+
+Not everyone needs their wisdom teeth removed. Extraction is recommended when:
+
+1. **Impaction** — The tooth can't fully emerge, causing pain or infection
+2. **Crowding** — The tooth pushes against adjacent teeth
+3. **Recurring infection** — Pericoronitis (gum infection around a partially erupted tooth)
+4. **Decay** — Wisdom teeth are hard to clean and prone to cavities
+5. **Cyst formation** — Fluid-filled sacs can develop around impacted teeth
+
+**When to keep them:** If your wisdom teeth are fully erupted, properly aligned, healthy, and cleanable, there's no need to remove them.
+
+### What to Expect During Recovery
+
+**Day 1-2:**
+- Swelling peaks at 48 hours — use ice packs (20 min on, 20 min off)
+- Bite on gauze for 30-45 minutes to control bleeding
+- Eat soft, cool foods (yogurt, soup, smoothies)
+- Avoid straws — suction can dislodge the blood clot
+
+**Day 3-5:**
+- Swelling begins to subside
+- Switch from ice to warm compresses
+- Rinse gently with warm salt water after meals
+- Gradually return to softer solid foods
+
+**Day 7-10:**
+- Most patients feel back to normal
+- Stitches dissolve or are removed
+- Resume normal eating and brushing
+
+### Dry Socket: The Main Risk
+
+Dry socket occurs when the blood clot dislodges from the extraction site, exposing the bone. It causes severe, throbbing pain 2-4 days after extraction.
+
+**Prevention:**
+- Don't smoke for at least 72 hours
+- Avoid straws and spitting
+- Don't rinse vigorously for 24 hours
+- Follow all post-op instructions
+
+**Treatment:** Your dentist will pack the socket with medicated dressing. Pain relief is usually immediate.
+
+### Sedation Options
+
+| Type | Cost (AED) | Awareness | Recovery |
+|------|-----------|-----------|----------|
+| Local anesthesia | Included | Fully awake | Immediate |
+| Nitrous oxide (laughing gas) | 500 – 1,000 | Relaxed but awake | 15 minutes |
+| IV sedation | 2,000 – 3,500 | Twilight sleep | 1-2 hours |
+| General anesthesia | 3,000 – 5,000 | Fully asleep | 2-4 hours |
+
+For anxious patients or complex extractions (all four impacted teeth), IV sedation or general anesthesia may be worth the additional cost.
+
+### Best Clinics for Wisdom Tooth Removal
+
+Look for clinics with **oral surgeons** (not just general dentists) for complex extractions. **Dubai Healthcare City, Deira, and Al Barsha** have many experienced oral surgery practices.
+
+[Find dental clinics near you →](/clinics)
+    `.trim(),
+  },
+  {
+    slug: 'pediatric-dentist-dubai',
+    title: 'Best Pediatric Dentists in Dubai 2026: Kids\' Dental Care Guide',
+    description: 'Find the best children\'s dentist in Dubai. Guide to pediatric dental care, first visit tips, costs, and kid-friendly clinics by area.',
+    date: '2026-02-18',
+    readTime: '8 min read',
+    category: 'Guides',
+    content: `
+## Children's Dental Care in Dubai
+
+Finding the right dentist for your child makes all the difference. Pediatric dentists in Dubai specialize in treating children from infancy through adolescence, with child-friendly environments and techniques that make dental visits stress-free.
+
+### When Should Your Child First See a Dentist?
+
+The American Academy of Pediatric Dentistry recommends a first visit by **age 1 or within 6 months of the first tooth**. In Dubai, most pediatric dentists suggest:
+
+- **6-12 months:** First dental visit (assess development, parent guidance)
+- **Every 6 months:** Regular checkups and cleanings from age 2
+- **Age 6-7:** First orthodontic evaluation
+- **Age 12-13:** All permanent teeth should be in — assess alignment
+
+### Pediatric Dental Costs in Dubai
+
+| Treatment | Price Range (AED) |
+|-----------|-------------------|
+| First visit / consultation | 200 – 500 |
+| Dental cleaning (child) | 200 – 400 |
+| Fluoride treatment | 150 – 300 |
+| Dental sealants (per tooth) | 150 – 300 |
+| Filling (baby tooth) | 300 – 600 |
+| Pulpotomy (baby root canal) | 500 – 1,000 |
+| Stainless steel crown | 500 – 1,000 |
+| Space maintainer | 500 – 1,500 |
+| Extraction (baby tooth) | 300 – 600 |
+| Sedation (nitrous oxide) | 500 – 1,000 |
+
+### What Makes a Pediatric Dentist Different?
+
+Pediatric dentists complete 2-3 years of additional training after dental school, specifically focused on:
+
+- **Child psychology** — techniques to manage fear and anxiety
+- **Growth and development** — understanding how teeth and jaws develop
+- **Sedation** — training in nitrous oxide and conscious sedation for children
+- **Special needs** — treating children with medical or developmental conditions
+
+Their clinics are designed for kids — colorful decor, TV screens on ceilings, play areas, and small prizes after visits. This matters more than you'd think.
+
+### Common Children's Dental Issues in Dubai
+
+**Early childhood cavities** are extremely common in Dubai, often caused by:
+- Prolonged bottle feeding (especially at bedtime)
+- High sugar consumption in juices and snacks
+- Insufficient brushing habits
+
+**Prevention tips:**
+1. Brush twice daily with fluoride toothpaste (rice-grain amount for under-3s, pea-sized for 3+)
+2. Stop bottle feeding by age 1
+3. Limit sugary snacks and juices
+4. Apply dental sealants to permanent molars (age 6 and 12)
+5. Regular fluoride treatments at dental visits
+
+### Dental Anxiety in Children
+
+Many children fear the dentist. Here's how to help:
+
+**Before the visit:**
+- Use positive language ("the dentist will count your teeth")
+- Avoid words like "pain," "needle," "drill"
+- Read children's books about dentist visits
+- Don't share your own dental fears
+
+**During the visit:**
+- A good pediatric dentist uses "tell-show-do" techniques
+- Distraction tools (TV, music, virtual reality)
+- Nitrous oxide ("laughing gas") for anxious children
+- Conscious sedation for extensive treatment
+
+### Best Areas for Pediatric Dentistry
+
+**Jumeirah and Umm Suqeim** — Many family-oriented clinics with dedicated pediatric wings serving the villa communities.
+
+**Dubai Marina and JBR** — Several modern clinics with pediatric specialists catering to expat families.
+
+**Dubai Healthcare City** — Specialized pediatric dental practices with the latest technology.
+
+**Al Barsha and Barsha Heights** — Growing number of family dental clinics with competitive pricing.
+
+### Insurance Coverage for Children
+
+Most Dubai health insurance plans include pediatric dental coverage:
+- **Preventive care** (checkups, cleanings, fluoride) — usually covered at 80-100%
+- **Basic treatments** (fillings, extractions) — typically 70-80% covered
+- **Major treatments** (crowns, sedation) — 50-70% covered
+- **Orthodontics** — often covered up to AED 5,000-10,000 lifetime maximum for under-18s
+
+### Tips for Choosing a Pediatric Dentist
+
+1. **Verify pediatric specialization** — ensure they're a certified pediatric dentist, not just a general dentist who treats kids
+2. **Visit the clinic first** — check the waiting area, staff friendliness, and child-friendliness
+3. **Ask about behavior management** — how do they handle anxious or uncooperative children?
+4. **Check emergency availability** — children's dental emergencies happen at inconvenient times
+5. **Language compatibility** — ensure the team speaks your child's language
+
+[Find pediatric dental clinics →](/clinics)
+    `.trim(),
+  },
+  {
+    slug: 'dental-checkup-cost-dubai',
+    title: 'Dental Checkup Cost in Dubai 2026: What\'s Included & Where to Go',
+    description: 'How much does a dental checkup cost in Dubai? Prices from AED 150 to AED 500. Learn what\'s included and find affordable clinics.',
+    date: '2026-02-18',
+    readTime: '6 min read',
+    category: 'Costs & Pricing',
+    content: `
+## How Much Does a Dental Checkup Cost in Dubai?
+
+A routine dental checkup in Dubai costs between **AED 150 and AED 500**, depending on the clinic and what's included. Many clinics offer free or discounted first consultations to attract new patients.
+
+### Price Guide
+
+| Service | Price Range (AED) |
+|---------|-------------------|
+| Basic checkup (exam only) | 150 – 300 |
+| Checkup + X-rays | 250 – 500 |
+| Checkup + cleaning + X-rays | 400 – 800 |
+| Comprehensive exam (full mouth X-rays, photos) | 500 – 1,000 |
+| Free first consultation | Many clinics offer this |
+
+### What's Included in a Standard Checkup?
+
+A good dental checkup should include:
+
+1. **Visual examination** — The dentist checks all teeth, gums, tongue, and soft tissues
+2. **Digital X-rays** — Usually 2 bitewing X-rays to check for cavities between teeth (full mouth X-rays annually or for new patients)
+3. **Gum assessment** — Checking for signs of gingivitis or periodontal disease
+4. **Oral cancer screening** — Visual and tactile examination of soft tissues
+5. **Treatment plan** — Discussion of any issues found and recommended treatments
+
+### How Often Should You Get a Checkup?
+
+**Standard recommendation:** Every 6 months for most adults and children.
+
+**More frequent visits (every 3-4 months) if you:**
+- Have a history of gum disease
+- Are prone to cavities
+- Smoke or use tobacco
+- Have diabetes
+- Are pregnant
+- Wear braces
+
+**Less frequent (annually) if you:**
+- Have excellent oral health
+- No history of cavities or gum disease
+- Practice good home care
+
+### Professional Cleaning: Is It Worth Adding?
+
+Yes. Professional cleaning (scaling and polishing) removes:
+- **Plaque** — Soft bacterial film that causes cavities
+- **Tartar/calculus** — Hardened plaque that can't be removed by brushing
+- **Surface stains** — From coffee, tea, or food
+
+**Cost:** AED 200-500 for a standard cleaning, AED 500-1,500 for deep cleaning (if gum disease is present).
+
+**Tip:** Book a "checkup + cleaning" package — most clinics offer a better price than booking separately.
+
+### Insurance Coverage
+
+Almost all Dubai health insurance plans cover preventive dental care:
+- **2 checkups per year** — typically 80-100% covered
+- **Annual cleaning** — usually included
+- **X-rays** — covered as part of diagnostic care
+
+**Without insurance:** Many clinics offer membership plans (AED 500-1,500/year) that include 2 checkups, cleanings, X-rays, and discounts on treatments. These can save 30-50% compared to paying per visit.
+
+### What to Look for in a Checkup Clinic
+
+**Red flags:**
+- Pushing expensive treatments without clear explanation
+- Not taking X-rays (can't see cavities between teeth without them)
+- Rushing through the exam (a thorough check takes 15-20 minutes minimum)
+- No discussion of findings or treatment options
+
+**Green flags:**
+- Takes time to explain findings with visual aids
+- Shows you X-rays and explains what they see
+- Discusses prevention, not just treatment
+- Provides a written treatment plan with cost estimates
+- Doesn't pressure you into same-day treatment
+
+### Affordable Checkups by Area
+
+**Best value areas:** Deira, Bur Dubai, Al Nahda, International City, and Al Qusais. Many clinics in these areas offer checkup + cleaning packages under AED 400.
+
+**University clinics:** Dubai's dental schools and training programs sometimes offer reduced-cost checkups performed by supervised students or residents.
+
+**Promotional offers:** Check clinic websites and social media for "new patient" offers — many clinics offer free first checkups or heavily discounted packages.
+
+[Find dental clinics near you →](/clinics)
+    `.trim(),
+  },
+  {
+    slug: 'dental-bridge-cost-dubai',
+    title: 'Dental Bridge Cost in Dubai 2026: Types, Prices & Alternatives',
+    description: 'How much does a dental bridge cost in Dubai? Compare traditional, Maryland, and cantilever bridges. Prices from AED 3,000 to AED 12,000.',
+    date: '2026-02-18',
+    readTime: '7 min read',
+    category: 'Costs & Pricing',
+    content: `
+## Dental Bridge Cost in Dubai
+
+A dental bridge in Dubai costs between **AED 3,000 and AED 12,000**, depending on the type of bridge, number of teeth replaced, and materials used. Bridges remain a popular and reliable way to replace one or more missing teeth without surgery.
+
+### Price by Bridge Type
+
+| Bridge Type | Price Range (AED) | Best For |
+|------------|-------------------|----------|
+| Traditional bridge (3 units) | 3,000 – 8,000 | Replacing 1-2 teeth with healthy teeth on both sides |
+| Traditional bridge (4-6 units) | 6,000 – 12,000 | Replacing 2-4 adjacent teeth |
+| Maryland bridge (resin-bonded) | 2,000 – 5,000 | Front teeth, minimal preparation |
+| Cantilever bridge | 2,500 – 6,000 | When only one adjacent tooth is available |
+| Implant-supported bridge | 15,000 – 40,000 | Replacing 3+ teeth without grinding healthy teeth |
+
+### Price by Material
+
+| Material | Per Unit (AED) | Aesthetics | Durability |
+|----------|---------------|------------|------------|
+| Porcelain-fused-to-metal (PFM) | 1,000 – 2,000 | Good | 10-15 years |
+| Full porcelain | 1,500 – 3,000 | Excellent | 10-15 years |
+| E-max | 2,000 – 3,500 | Excellent | 15+ years |
+| Zirconia | 1,500 – 3,000 | Very good | 15+ years |
+
+**Note:** A 3-unit bridge (replacing 1 tooth) uses 3 crowns — 2 on the supporting teeth and 1 for the missing tooth (pontic). So multiply the per-unit cost by 3.
+
+### How Does a Dental Bridge Work?
+
+A traditional dental bridge works by:
+1. **Preparing** the teeth on either side of the gap (grinding them down for crowns)
+2. **Taking impressions** or digital scans
+3. **Placing a temporary bridge** while the lab makes the permanent one
+4. **Cementing the permanent bridge** 1-2 weeks later
+
+The entire process typically requires 2-3 visits over 2-3 weeks.
+
+### Bridge vs. Implant: Which Is Better?
+
+| Factor | Dental Bridge | Dental Implant |
+|--------|--------------|----------------|
+| Cost | AED 3,000-8,000 | AED 5,000-15,000 |
+| Treatment time | 2-3 weeks | 3-6 months |
+| Surgery required | No | Yes |
+| Affects adjacent teeth | Yes (grinding) | No |
+| Lifespan | 10-15 years | 20+ years (often lifetime) |
+| Bone preservation | No | Yes |
+| Cleaning difficulty | Moderate (need floss threaders) | Same as natural teeth |
+
+**Choose a bridge if:** You want a faster, non-surgical option, have healthy adjacent teeth that could benefit from crowns anyway, or aren't a candidate for implants.
+
+**Choose an implant if:** You want the longest-lasting solution, don't want to modify healthy teeth, or are replacing a single tooth with healthy neighbors.
+
+### When Is a Bridge Not Recommended?
+
+- Adjacent teeth are weak or have large fillings (can't support the bridge)
+- Multiple consecutive teeth are missing (3+ in a row)
+- You grind your teeth heavily (high failure risk)
+- The gap has been present for years and bone has receded significantly
+
+### Caring for Your Dental Bridge
+
+1. **Floss under the bridge daily** — Use a floss threader, superfloss, or water flosser
+2. **Brush twice daily** — Pay extra attention to where the bridge meets the gum
+3. **Avoid hard and sticky foods** — Can dislodge or damage the bridge
+4. **Regular dental checkups** — Every 6 months to check the bridge and surrounding teeth
+5. **Night guard if you grind** — Protects the bridge from excessive force
+
+### Best Clinics for Dental Bridges
+
+Look for clinics with experienced prosthodontists (specialists in tooth replacement) and quality dental labs. **Deira and Bur Dubai** offer the most competitive pricing, while **DHCC and Downtown** have many specialist prosthodontists.
+
+[Compare dental clinics →](/clinics)
+    `.trim(),
+  },
+  {
+    slug: 'dental-insurance-dubai-guide',
+    title: 'Dental Insurance in Dubai 2026: Coverage, Costs & Best Plans',
+    description: 'Complete guide to dental insurance in Dubai. Understand what\'s covered, compare plans, and learn how to maximize your dental benefits.',
+    date: '2026-02-18',
+    readTime: '8 min read',
+    category: 'Guides',
+    content: `
+## Dental Insurance in Dubai: What You Need to Know
+
+Dental coverage in Dubai is part of the mandatory health insurance system, but the extent of coverage varies dramatically between plans. Understanding your dental benefits can save you thousands of dirhams per year.
+
+### Is Dental Insurance Mandatory in Dubai?
+
+Yes and no. **Health insurance is mandatory** for all Dubai residents (since 2014). However, the basic DHA-mandated plan (for employees earning under AED 4,000/month) includes only emergency dental coverage and basic preventive care.
+
+Better dental coverage comes with enhanced plans, which most employers provide for mid-to-senior level employees.
+
+### What's Typically Covered?
+
+| Coverage Level | What's Included | Annual Limit (AED) |
+|---------------|-----------------|-------------------|
+| **Basic (mandatory)** | Emergency dental, basic extractions | 1,000 – 3,000 |
+| **Standard** | Checkups, cleanings, fillings, extractions | 3,000 – 7,000 |
+| **Enhanced** | Above + root canals, crowns, dentures | 7,000 – 15,000 |
+| **Premium** | Above + orthodontics, implants, cosmetic | 15,000 – 50,000+ |
+
+### Common Coverage Breakdown
+
+**Preventive (usually 80-100% covered):**
+- Dental checkups (2 per year)
+- Professional cleanings
+- X-rays
+- Fluoride treatments (children)
+
+**Basic restorative (usually 70-80% covered):**
+- Fillings (amalgam and composite)
+- Simple extractions
+- Emergency treatments
+
+**Major restorative (usually 50-70% covered):**
+- Root canal treatment
+- Dental crowns
+- Dental bridges
+- Dentures
+- Surgical extractions
+
+**Specialist/Cosmetic (varies widely):**
+- Orthodontics (often limited to under-18, lifetime max AED 5,000-10,000)
+- Dental implants (rarely covered, some premium plans include)
+- Veneers (cosmetic, usually not covered)
+- Teeth whitening (cosmetic, not covered)
+
+### Waiting Periods
+
+Many dental plans have waiting periods before you can claim major treatments:
+- **Preventive care:** No waiting period
+- **Basic treatments:** 0-3 months
+- **Major treatments:** 6-12 months
+- **Orthodontics:** 12 months
+
+**Important:** If you switch employers, your waiting period may reset. Check your new plan carefully.
+
+### How to Maximize Your Dental Benefits
+
+1. **Use your preventive benefits fully** — You're paying for 2 checkups and cleanings per year; use them
+2. **Schedule major work strategically** — If you need multiple crowns, split them across two calendar years to use two annual limits
+3. **Get pre-authorization** — For treatments over AED 500, submit a pre-authorization to avoid claim rejections
+4. **Choose in-network clinics** — Co-pays are typically lower at network clinics (sometimes 0% vs. 20-30% out-of-network)
+5. **Keep all receipts** — For out-of-network claims, you'll need itemized invoices
+
+### No Insurance? Your Options
+
+**Clinic membership plans:** Many Dubai dental clinics offer annual membership plans (AED 500-1,500/year) that include:
+- 2 checkups and cleanings
+- Dental X-rays
+- 10-20% discount on all treatments
+- Priority booking
+
+These can be excellent value if you don't have dental insurance or your coverage is limited.
+
+**Payment plans:** Most clinics offer 0% interest installment plans for treatments over AED 2,000. Some partner with financing companies (Tabby, Tamara) for buy-now-pay-later options.
+
+**Medical tourism:** If you need extensive work (full mouth rehab, multiple implants), some patients travel to countries like India, Turkey, or Thailand. However, Dubai's competitive pricing and DHA regulation often make local treatment the better choice for most procedures.
+
+### Tips for Expats New to Dubai
+
+1. **Review your dental coverage** during your employment offer — negotiate enhanced dental if possible
+2. **Register with a dentist early** — don't wait for a problem
+3. **Understand your network** — your insurer's app or website lists approved dental clinics
+4. **Keep your insurance card handy** — most clinics process claims directly
+5. **Know the claim process** — some plans require pre-approval for treatments over a certain amount
+
+### For Freelancers and Business Owners
+
+If you're self-employed or run a business, you'll need to arrange your own health insurance. Options:
+- **Individual plans:** AED 3,000-15,000/year depending on coverage level
+- **Family plans:** AED 8,000-30,000/year for a family of 3-4
+- **Top providers for dental:** Daman, Oman Insurance, AXA, Cigna, MetLife
+
+**Tip:** When comparing plans, look specifically at the dental annual limit, co-pay percentages, and waiting periods. A plan with AED 500 higher premium but AED 10,000 higher dental limit is often worth it.
+
+[Find dental clinics that accept your insurance →](/clinics)
+    `.trim(),
+  },
 ]
