@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import List, Dict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-API_KEY = "AIzaSyA7sFLszMz62PeGJVjT8y12BUEDWc4LjTE"
+API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY", "")
 BASE_URL = "https://places.googleapis.com/v1"
 MAX_WIDTH = 800
 CONCURRENT_DOWNLOADS = 10

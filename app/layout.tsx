@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     description: 'Find the best dentists in Dubai',
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: 'zZxqwrJpfX0Y0wy8_HAiBUxAb5EGhJPDsnIXyKeWdoQ',
+  },
   alternates: { canonical: 'https://dubaidentalclinics.com' },
 }
 
@@ -97,6 +100,9 @@ function Header() {
             </a>
             <a href="/blog" className="px-4 py-2 text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg font-medium transition-all">
               <span>Blog</span>
+            </a>
+            <a href="/contact" className="px-4 py-2 text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg font-medium transition-all">
+              <span>Contact</span>
             </a>
             <a href="/emergency" className="ml-2 px-5 py-2.5 bg-coral-500 hover:bg-coral-600 text-white rounded-xl font-semibold transition-all shadow-sm hover:shadow-md flex items-center gap-2">
               <AlertIcon className="w-4 h-4" />
@@ -202,6 +208,17 @@ function Footer() {
               <li><a href="/about" className="text-slate-400 hover:text-brand-400 transition-colors">About Us</a></li>
               <li><a href="/contact" className="text-slate-400 hover:text-brand-400 transition-colors">Contact</a></li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <h4 className="font-semibold text-sm text-slate-300 mb-3">Dubai Health Directory</h4>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a href="https://dubaiveterinaries.com" className="text-slate-400 hover:text-white transition-colors">Dubai Veterinaries</a>
+            <a href="https://dubaihairtransplantclinics.com" className="text-slate-400 hover:text-white transition-colors">Dubai Hair Transplant Clinics</a>
+            <a href="https://dubaifertilityclinics.com" className="text-slate-400 hover:text-white transition-colors">Dubai Fertility Clinics</a>
           </div>
         </div>
       </div>

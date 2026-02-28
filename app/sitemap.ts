@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Area pages
   const areas = Array.from(new Set(clinicsData.clinics.map((c: any) => c.area)))
   const areaPages = areas.map((area: string) => ({
-    url: `${baseUrl}/dentists/${area.toLowerCase().replace(/\s+/g, '-')}`,
+    url: `${baseUrl}/dentists/${area.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
