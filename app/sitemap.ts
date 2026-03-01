@@ -7,16 +7,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   // Static pages
   const staticPages = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 1.0 },
-    { url: `${baseUrl}/clinics`, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 0.9 },
-    { url: `${baseUrl}/emergency`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${baseUrl}/services`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/`, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 1.0 },
+    { url: `${baseUrl}/clinics/`, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 0.9 },
+    { url: `${baseUrl}/emergency/`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/services/`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
   ]
   
   // Service pages
   const services = ['general-dentistry', 'cosmetic-dentistry', 'orthodontics', 'dental-implants', 'teeth-whitening', 'root-canal', 'pediatric-dentistry']
   const servicePages = services.map(s => ({
-    url: `${baseUrl}/services/${s}`,
+    url: `${baseUrl}/services/${s}/`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   // Clinic pages
   const clinicPages = clinicsData.clinics.map((clinic: any) => ({
-    url: `${baseUrl}/clinics/${clinic.slug}`,
+    url: `${baseUrl}/clinics/${clinic.slug}/`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Area pages
   const areas = Array.from(new Set(clinicsData.clinics.map((c: any) => c.area)))
   const areaPages = areas.map((area: string) => ({
-    url: `${baseUrl}/dentists/${area.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`,
+    url: `${baseUrl}/dentists/${area.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}/`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
@@ -41,9 +41,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   // Blog pages
   const blogPages = [
-    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${baseUrl}/blog/`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
     ...blogPosts.map(post => ({
-      url: `${baseUrl}/blog/${post.slug}`,
+      url: `${baseUrl}/blog/${post.slug}/`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
